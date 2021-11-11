@@ -10953,6 +10953,10 @@ The hidden information for an 'asymbol' is described in a
 
       /* Selector for the union above.  */
       bool is_sym;
+
+      /* An extra pointer which can used by format based on COFF (like XCOFF)
+         to provide extra information to their backend.  */
+      void *extrap;
      } combined_entry_type;
 
 
@@ -12262,7 +12266,7 @@ BFD Index
                                                              (line  170)
 * bfd_close_all_done:                    Opening and Closing.
                                                              (line  188)
-* bfd_coff_backend_data:                 coff.               (line  296)
+* bfd_coff_backend_data:                 coff.               (line  300)
 * bfd_convert_section_contents:          Miscellaneous.      (line  393)
 * bfd_convert_section_size:              Miscellaneous.      (line  383)
 * bfd_copy_private_bfd_data:             Miscellaneous.      (line  168)
@@ -14982,13 +14986,13 @@ Node: BFD back ends396920
 Node: What to Put Where397190
 Node: aout397370
 Node: coff403624
-Node: elf431605
-Node: mmo432006
-Node: File layout432876
-Node: Symbol-table438789
-Node: mmo section mapping442552
-Node: GNU Free Documentation License446206
-Node: BFD Index471270
+Node: elf431764
+Node: mmo432165
+Node: File layout433035
+Node: Symbol-table438948
+Node: mmo section mapping442711
+Node: GNU Free Documentation License446365
+Node: BFD Index471429
 
 End Tag Table
 

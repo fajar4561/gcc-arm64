@@ -21,7 +21,7 @@ along with GCC; see the file COPYING3.  If not see
 #define IPA_MODREF_H
 
 typedef modref_tree <alias_set_type> modref_records;
-typedef unsigned char eaf_flags_t;
+typedef unsigned short eaf_flags_t;
 
 /* Single function summary.  */
 
@@ -34,6 +34,7 @@ struct GTY(()) modref_summary
   eaf_flags_t retslot_flags;
   eaf_flags_t static_chain_flags;
   bool writes_errno;
+  bool side_effects;
 
   modref_summary ();
   ~modref_summary ();
@@ -48,14 +49,55 @@ void ipa_modref_c_finalize ();
 void ipa_merge_modref_summary_after_inlining (cgraph_edge *e);
 
 /* All flags that are implied by the ECF_CONST functions.  */
-static const int implicit_const_eaf_flags = EAF_DIRECT | EAF_NOCLOBBER | EAF_NOESCAPE
-				     | EAF_NODIRECTESCAPE | EAF_NOREAD;
+static const int implicit_const_eaf_flags
+   = EAF_NO_DIRECT_CLOBBER | EAF_NO_INDIRECT_CLOBBER
+    | EAF_NO_DIRECT_ESCAPE | EAF_NO_INDIRECT_ESCAPE
+    | EAF_NO_DIRECT_READ | EAF_NO_INDIRECT_READ
+    | EAF_NOT_RETURNED_INDIRECTLY;
+
 /* All flags that are implied by the ECF_PURE function.  */
-static const int implicit_pure_eaf_flags = EAF_NOCLOBBER | EAF_NOESCAPE
-				    | EAF_NODIRECTESCAPE;
+static const int implicit_pure_eaf_flags
+   = EAF_NO_DIRECT_CLOBBER | EAF_NO_INDIRECT_CLOBBER
+    | EAF_NO_DIRECT_ESCAPE | EAF_NO_INDIRECT_ESCAPE;
+
 /* All flags implied when we know we can ignore stores (i.e. when handling
    call to noreturn).  */
-static const int ignore_stores_eaf_flags = EAF_DIRECT | EAF_NOCLOBBER | EAF_NOESCAPE
-				    | EAF_NODIRECTESCAPE;
+static const int ignore_stores_eaf_flags
+   = EAF_NO_DIRECT_CLOBBER | EAF_NO_INDIRECT_CLOBBER
+    | EAF_NO_DIRECT_ESCAPE | EAF_NO_INDIRECT_ESCAPE;
+
+/* Return slot is write-only.  */
+static const int implicit_retslot_eaf_flags
+   = EAF_NO_DIRECT_READ | EAF_NO_INDIRECT_READ
+     | EAF_NO_INDIRECT_ESCAPE | EAF_NO_INDIRECT_CLOBBER
+     | EAF_NOT_RETURNED_INDIRECTLY;
+
+/* If function does not bind to current def (i.e. it is inline in comdat
+   section), the modref analysis may not match the behaviour of function
+   which will be later symbol interposed to.  All side effects must match
+   however it is possible that the other function body contains more loads
+   which may trap.
+   MODREF_FLAGS are flags determined by analysis of function body while
+   FLAGS are flags known otherwise (i.e. by fnspec, pure/const attributes
+   etc.)  */
+static inline int
+interposable_eaf_flags (int modref_flags, int flags)
+{
+  /* If parameter was previously unused, we know it is only read
+     and its value is not used.  */
+  if ((modref_flags & EAF_UNUSED) && !(flags & EAF_UNUSED))
+    {
+      modref_flags &= ~EAF_UNUSED;
+      modref_flags |= EAF_NO_DIRECT_ESCAPE | EAF_NO_INDIRECT_ESCAPE
+		      | EAF_NOT_RETURNED_DIRECTLY | EAF_NOT_RETURNED_INDIRECTLY
+		      | EAF_NO_DIRECT_CLOBBER | EAF_NO_INDIRECT_CLOBBER;
+    }
+  /* We can not deterine that value is not read at all.  */
+  if ((modref_flags & EAF_NO_DIRECT_READ) && !(flags & EAF_NO_DIRECT_READ))
+    modref_flags &= ~EAF_NO_DIRECT_READ;
+  if ((modref_flags & EAF_NO_INDIRECT_READ) && !(flags & EAF_NO_INDIRECT_READ))
+    modref_flags &= ~EAF_NO_INDIRECT_READ;
+  return modref_flags;
+}
 
 #endif
