@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "GCC 1"
-.TH GCC 1 "2021-11-11" "gcc-12.0.0" "GNU"
+.TH GCC 1 "2021-11-14" "gcc-12.0.0" "GNU"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -472,7 +472,11 @@ in the following sections.
 \&\-Wno\-analyzer\-shift\-count\-negative 
 \&\-Wno\-analyzer\-shift\-count\-overflow 
 \&\-Wno\-analyzer\-stale\-setjmp\-buffer 
+\&\-Wno\-analyzer\-tainted\-allocation\-size 
 \&\-Wno\-analyzer\-tainted\-array\-index 
+\&\-Wno\-analyzer\-tainted\-divisor 
+\&\-Wno\-analyzer\-tainted\-offset 
+\&\-Wno\-analyzer\-tainted\-size 
 \&\-Wanalyzer\-too\-complex 
 \&\-Wno\-analyzer\-unsafe\-call\-within\-signal\-handler 
 \&\-Wno\-analyzer\-use\-after\-free 
@@ -8744,7 +8748,11 @@ Enabling this option effectively enables the following warnings:
 \&\-Wanalyzer\-shift\-count\-negative 
 \&\-Wanalyzer\-shift\-count\-overflow 
 \&\-Wanalyzer\-stale\-setjmp\-buffer 
+\&\-Wanalyzer\-tainted\-allocation\-size 
 \&\-Wanalyzer\-tainted\-array\-index 
+\&\-Wanalyzer\-tainted\-divisor 
+\&\-Wanalyzer\-tainted\-offset 
+\&\-Wanalyzer\-tainted\-size 
 \&\-Wanalyzer\-unsafe\-call\-within\-signal\-handler 
 \&\-Wanalyzer\-use\-after\-free 
 \&\-Wanalyzer\-use\-of\-uninitialized\-value 
@@ -8895,6 +8903,19 @@ location, it records the stack frame.  The stack frame becomes invalid
 when the function containing the \f(CW\*(C`setjmp\*(C'\fR call returns.  Attempting
 to rewind to it via \f(CW\*(C`longjmp\*(C'\fR would reference a stack frame that
 no longer exists, and likely lead to a crash (or worse).
+.IP "\fB\-Wno\-analyzer\-tainted\-allocation\-size\fR" 4
+.IX Item "-Wno-analyzer-tainted-allocation-size"
+This warning requires both \fB\-fanalyzer\fR and
+\&\fB\-fanalyzer\-checker=taint\fR to enable it;
+use \fB\-Wno\-analyzer\-tainted\-allocation\-size\fR to disable it.
+.Sp
+This diagnostic warns for paths through the code in which a value
+that could be under an attacker's control is used as the size
+of an allocation without being sanitized, so that an attacker could
+inject an excessively large allocation and potentially cause a denial
+of service attack.
+.Sp
+See \f(CW@url\fR{https://cwe.mitre.org/data/definitions/789.html, \s-1CWE\-789:\s0 Memory Allocation with Excessive Size Value}.
 .IP "\fB\-Wno\-analyzer\-tainted\-array\-index\fR" 4
 .IX Item "-Wno-analyzer-tainted-array-index"
 This warning requires both \fB\-fanalyzer\fR and
@@ -8903,7 +8924,42 @@ use \fB\-Wno\-analyzer\-tainted\-array\-index\fR to disable it.
 .Sp
 This diagnostic warns for paths through the code in which a value
 that could be under an attacker's control is used as the index
-of an array access without being sanitized.
+of an array access without being sanitized, so that an attacker
+could inject an out-of-bounds access.
+.Sp
+See \f(CW@url\fR{https://cwe.mitre.org/data/definitions/129.html, \s-1CWE\-129:\s0 Improper Validation of Array Index}.
+.IP "\fB\-Wno\-analyzer\-tainted\-divisor\fR" 4
+.IX Item "-Wno-analyzer-tainted-divisor"
+This warning requires both \fB\-fanalyzer\fR and
+\&\fB\-fanalyzer\-checker=taint\fR to enable it;
+use \fB\-Wno\-analyzer\-tainted\-divisor\fR to disable it.
+.Sp
+This diagnostic warns for paths through the code in which a value
+that could be under an attacker's control is used as the divisor
+in a division or modulus operation without being sanitized, so that
+an attacker could inject a division-by-zero.
+.IP "\fB\-Wno\-analyzer\-tainted\-offset\fR" 4
+.IX Item "-Wno-analyzer-tainted-offset"
+This warning requires both \fB\-fanalyzer\fR and
+\&\fB\-fanalyzer\-checker=taint\fR to enable it;
+use \fB\-Wno\-analyzer\-tainted\-offset\fR to disable it.
+.Sp
+This diagnostic warns for paths through the code in which a value
+that could be under an attacker's control is used as a pointer offset
+without being sanitized, so that an attacker could inject an out-of-bounds
+access.
+.Sp
+See \f(CW@url\fR{https://cwe.mitre.org/data/definitions/823.html, \s-1CWE\-823:\s0 Use of Out-of-range Pointer Offset}.
+.IP "\fB\-Wno\-analyzer\-tainted\-size\fR" 4
+.IX Item "-Wno-analyzer-tainted-size"
+This warning requires both \fB\-fanalyzer\fR and
+\&\fB\-fanalyzer\-checker=taint\fR to enable it;
+use \fB\-Wno\-analyzer\-tainted\-size\fR to disable it.
+.Sp
+This diagnostic warns for paths through the code in which a value
+that could be under an attacker's control is used as the size of
+an operation such as \f(CW\*(C`memset\*(C'\fR without being sanitized, so that an
+attacker could inject an out-of-bounds access.
 .IP "\fB\-Wno\-analyzer\-unsafe\-call\-within\-signal\-handler\fR" 4
 .IX Item "-Wno-analyzer-unsafe-call-within-signal-handler"
 This warning requires \fB\-fanalyzer\fR, which enables it; use
@@ -26592,7 +26648,7 @@ Supported values for \fIcpu_type\fR are \fB401\fR, \fB403\fR,
 \&\fBe6500\fR, \fBec603e\fR, \fBG3\fR, \fBG4\fR, \fBG5\fR,
 \&\fBtitan\fR, \fBpower3\fR, \fBpower4\fR, \fBpower5\fR, \fBpower5+\fR,
 \&\fBpower6\fR, \fBpower6x\fR, \fBpower7\fR, \fBpower8\fR,
-\&\fBpower9\fR, \fBfuture\fR, \fBpowerpc\fR, \fBpowerpc64\fR,
+\&\fBpower9\fR, \fBpower10\fR, \fBpowerpc\fR, \fBpowerpc64\fR,
 \&\fBpowerpc64le\fR, \fBrs64\fR, and \fBnative\fR.
 .Sp
 \&\fB\-mcpu=powerpc\fR, \fB\-mcpu=powerpc64\fR, and
@@ -26779,10 +26835,9 @@ Enable/disable the \fI_\|_float128\fR keyword for \s-1IEEE\s0 128\-bit floating 
 and use either software emulation for \s-1IEEE\s0 128\-bit floating point or
 hardware instructions.
 .Sp
-The \s-1VSX\s0 instruction set (\fB\-mvsx\fR, \fB\-mcpu=power7\fR,
-\&\fB\-mcpu=power8\fR), or \fB\-mcpu=power9\fR must be enabled to
-use the \s-1IEEE\s0 128\-bit floating point support.  The \s-1IEEE\s0 128\-bit
-floating point support only works on PowerPC Linux systems.
+The \s-1VSX\s0 instruction set (\fB\-mvsx\fR) must be enabled to use the \s-1IEEE\s0
+128\-bit floating point support.  The \s-1IEEE\s0 128\-bit floating point is only
+supported on Linux.
 .Sp
 The default for \fB\-mfloat128\fR is enabled on PowerPC Linux
 systems using the \s-1VSX\s0 instruction set, and disabled on other systems.
@@ -27619,10 +27674,9 @@ the offset with a symbol reference to a canary in the \s-1TLS\s0 block.
 .IP "\fB\-mno\-pcrel\fR" 4
 .IX Item "-mno-pcrel"
 .PD
-Generate (do not generate) pc-relative addressing when the option
-\&\fB\-mcpu=future\fR is used.  The \fB\-mpcrel\fR option requires
-that the medium code model (\fB\-mcmodel=medium\fR) and prefixed
-addressing (\fB\-mprefixed\fR) options are enabled.
+Generate (do not generate) pc-relative addressing.  The \fB\-mpcrel\fR
+option requires that the medium code model (\fB\-mcmodel=medium\fR)
+and prefixed addressing (\fB\-mprefixed\fR) options are enabled.
 .IP "\fB\-mprefixed\fR" 4
 .IX Item "-mprefixed"
 .PD 0
@@ -27630,15 +27684,17 @@ addressing (\fB\-mprefixed\fR) options are enabled.
 .IX Item "-mno-prefixed"
 .PD
 Generate (do not generate) addressing modes using prefixed load and
-store instructions when the option \fB\-mcpu=future\fR is used.
+store instructions.  The \fB\-mprefixed\fR option requires that
+the option \fB\-mcpu=power10\fR (or later) is enabled.
 .IP "\fB\-mmma\fR" 4
 .IX Item "-mmma"
 .PD 0
 .IP "\fB\-mno\-mma\fR" 4
 .IX Item "-mno-mma"
 .PD
-Generate (do not generate) the \s-1MMA\s0 instructions when the option
-\&\fB\-mcpu=future\fR is used.
+Generate (do not generate) the \s-1MMA\s0 instructions.  The \fB\-mma\fR
+option requires that the option \fB\-mcpu=power10\fR (or later)
+is enabled.
 .IP "\fB\-mrop\-protect\fR" 4
 .IX Item "-mrop-protect"
 .PD 0

@@ -32,10 +32,12 @@ along with GCC; see the file COPYING3.  If not see
 class path_range_query : public range_query
 {
 public:
-  path_range_query (class gimple_ranger &ranger, bool resolve);
+  path_range_query (bool resolve = true, class gimple_ranger *ranger = NULL);
   virtual ~path_range_query ();
-  void compute_ranges (const vec<basic_block> &, const bitmap_head *imports = NULL);
+  void compute_ranges (const vec<basic_block> &,
+		       const bitmap_head *imports = NULL);
   void compute_ranges (edge e);
+  void compute_imports (bitmap imports, basic_block exit);
   bool range_of_expr (irange &r, tree name, gimple * = NULL) override;
   bool range_of_stmt (irange &r, gimple *, tree name = NULL) override;
   bool unreachable_path_p ();
@@ -56,14 +58,14 @@ private:
   // Methods to compute ranges for the given path.
   bool range_defined_in_block (irange &, tree name, basic_block bb);
   void compute_ranges_in_block (basic_block bb);
+  void compute_ranges_in_phis (basic_block bb);
   void adjust_for_non_null_uses (basic_block bb);
   void ssa_range_in_phi (irange &r, gphi *phi);
   void compute_outgoing_relations (basic_block bb, basic_block next);
   void compute_phi_relations (basic_block bb, basic_block prev);
   void maybe_register_phi_relation (gphi *, tree arg);
-  void add_copies_to_imports ();
   bool add_to_imports (tree name, bitmap imports);
-  inline bool import_p (tree name);
+  bool import_p (tree name);
 
   // Path navigation.
   void set_path (const vec<basic_block> &);
@@ -79,6 +81,8 @@ private:
   // Range cache for SSA names.
   ssa_global_cache *m_cache;
 
+  ssa_global_cache m_tmp_phi_cache;
+
   // Set for each SSA that has an active entry in the cache.
   bitmap m_has_cache_entry;
 
@@ -86,7 +90,7 @@ private:
   auto_vec<basic_block> m_path;
 
   auto_bitmap m_imports;
-  gimple_ranger &m_ranger;
+  gimple_ranger *m_ranger;
   non_null_ref m_non_null;
 
   // Current path position.
@@ -97,15 +101,10 @@ private:
 
   // Set if there were any undefined expressions while pre-calculating path.
   bool m_undefined_path;
+
+  // True if m_ranger was allocated in this class and must be freed at
+  // destruction.
+  bool m_alloced_ranger;
 };
-
-// Return TRUE if NAME is in the import bitmap.
-
-bool
-path_range_query::import_p (tree name)
-{
-  return (TREE_CODE (name) == SSA_NAME
-	  && bitmap_bit_p (m_imports, SSA_NAME_VERSION (name)));
-}
 
 #endif // GCC_TREE_SSA_THREADSOLVER_H
