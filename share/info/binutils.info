@@ -4872,9 +4872,11 @@ File: binutils.info,  Node: elfedit,  Next: Common Options,  Prev: readelf,  Up:
      elfedit [--input-mach=MACHINE]
              [--input-type=TYPE]
              [--input-osabi=OSABI]
+             [--input-abiversion=VERSION]
              --output-mach=MACHINE
              --output-type=TYPE
              --output-osabi=OSABI
+             --output-abiversion=VERSION
              --enable-x86-feature=FEATURE
              --disable-x86-feature=FEATURE
              [-v|--version]
@@ -4891,8 +4893,8 @@ files are supported, as are archives containing ELF files.
 
    The long and short forms of options, shown here as alternatives, are
 equivalent.  At least one of the '--output-mach', '--output-type',
-'--output-osabi', '--enable-x86-feature' and '--disable-x86-feature'
-options must be given.
+'--output-osabi', '--output-abiversion', '--enable-x86-feature' and
+'--disable-x86-feature' options must be given.
 
 '--input-mach=MACHINE'
      Set the matching input ELF machine type to MACHINE.  If
@@ -4927,6 +4929,15 @@ options must be given.
 '--output-osabi=OSABI'
      Change the ELF OSABI in the ELF header to OSABI.  The supported ELF
      OSABI are the same as '--input-osabi'.
+
+'--input-abiversion=VERSION'
+     Set the matching input ELF file ABIVERSION to VERSION.  VERSION
+     must be between 0 and 255.  If '--input-abiversion' isn't
+     specified, it will match any ELF ABIVERSIONs.
+
+'--output-abiversion=VERSION'
+     Change the ELF ABIVERSION in the ELF header to VERSION.  VERSION
+     must be between 0 and 255.
 
 '--enable-x86-feature=FEATURE'
      Set the FEATURE bit in program property in EXEC or DYN ELF files
@@ -6019,16 +6030,16 @@ Node: dlltool160042
 Node: def file format173039
 Node: readelf175569
 Node: elfedit193857
-Node: Common Options196831
-Node: Selecting the Target System197865
-Node: Target Selection198793
-Node: Architecture Selection200774
-Node: debuginfod201602
-Node: Reporting Bugs202361
-Node: Bug Criteria203123
-Node: Bug Reporting203676
-Node: GNU Free Documentation License210547
-Node: Binutils Index235707
+Node: Common Options197283
+Node: Selecting the Target System198317
+Node: Target Selection199245
+Node: Architecture Selection201226
+Node: debuginfod202054
+Node: Reporting Bugs202813
+Node: Bug Criteria203575
+Node: Bug Reporting204128
+Node: GNU Free Documentation License210999
+Node: Binutils Index236159
 
 End Tag Table
 

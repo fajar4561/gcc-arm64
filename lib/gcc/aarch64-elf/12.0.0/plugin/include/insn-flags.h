@@ -9440,6 +9440,12 @@
 #define HAVE_fminvnx4sf3 (TARGET_SVE)
 #define HAVE_fmaxvnx2df3 (TARGET_SVE)
 #define HAVE_fminvnx2df3 (TARGET_SVE)
+#define HAVE_cond_fmaxvnx8hf (TARGET_SVE)
+#define HAVE_cond_fminvnx8hf (TARGET_SVE)
+#define HAVE_cond_fmaxvnx4sf (TARGET_SVE)
+#define HAVE_cond_fminvnx4sf (TARGET_SVE)
+#define HAVE_cond_fmaxvnx2df (TARGET_SVE)
+#define HAVE_cond_fminvnx2df (TARGET_SVE)
 #define HAVE_iorvnx16bi3 (TARGET_SVE)
 #define HAVE_xorvnx16bi3 (TARGET_SVE)
 #define HAVE_iorvnx8bi3 (TARGET_SVE)
@@ -20905,6 +20911,12 @@ extern rtx        gen_fmaxvnx4sf3                                    (rtx, rtx, 
 extern rtx        gen_fminvnx4sf3                                    (rtx, rtx, rtx);
 extern rtx        gen_fmaxvnx2df3                                    (rtx, rtx, rtx);
 extern rtx        gen_fminvnx2df3                                    (rtx, rtx, rtx);
+extern rtx        gen_cond_fmaxvnx8hf                                (rtx, rtx, rtx, rtx, rtx);
+extern rtx        gen_cond_fminvnx8hf                                (rtx, rtx, rtx, rtx, rtx);
+extern rtx        gen_cond_fmaxvnx4sf                                (rtx, rtx, rtx, rtx, rtx);
+extern rtx        gen_cond_fminvnx4sf                                (rtx, rtx, rtx, rtx, rtx);
+extern rtx        gen_cond_fmaxvnx2df                                (rtx, rtx, rtx, rtx, rtx);
+extern rtx        gen_cond_fminvnx2df                                (rtx, rtx, rtx, rtx, rtx);
 extern rtx        gen_iorvnx16bi3                                    (rtx, rtx, rtx);
 extern rtx        gen_xorvnx16bi3                                    (rtx, rtx, rtx);
 extern rtx        gen_iorvnx8bi3                                     (rtx, rtx, rtx);
