@@ -25617,7 +25617,7 @@ contact that organization first.
 individuals in the file 'etc/SERVICE' in the GNU Emacs distribution.
 
    In any event, we also recommend that you send bug reports for 'as' to
-<https://www.sourceware.org/bugzilla/>.
+<https://sourceware.org/bugzilla/>.
 
    The fundamental principle of reporting bugs usefully is this: *report
 all the facts*.  If you are not sure whether to state a fact or leave it
@@ -30046,10 +30046,10 @@ Node: Z8000 Opcodes927832
 Node: Reporting Bugs937774
 Node: Bug Criteria938500
 Node: Bug Reporting939267
-Node: Acknowledgements945912
-Ref: Acknowledgements-Footnote-1950878
-Node: GNU Free Documentation License950904
-Node: AS Index976054
+Node: Acknowledgements945908
+Ref: Acknowledgements-Footnote-1950874
+Node: GNU Free Documentation License950900
+Node: AS Index976050
 
 End Tag Table
 
