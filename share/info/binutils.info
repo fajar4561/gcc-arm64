@@ -3035,8 +3035,12 @@ files.
 '-MIN-LEN'
 '-n MIN-LEN'
 '--bytes=MIN-LEN'
-     Print sequences of characters that are at least MIN-LEN characters
-     long, instead of the default 4.
+     Print sequences of displayable characters that are at least MIN-LEN
+     characters long.  If not specified a default minimum length of 4 is
+     used.  The distinction between displayable and non-displayable
+     characters depends upon the setting of the '-e' and '-U' options.
+     Sequences are always terminated at control characters such as
+     new-line and carriage-return, but not the tab character.
 
 '-o'
      Like '-t o'.  Some other versions of 'strings' have '-o' act like
@@ -5939,7 +5943,7 @@ Binutils Index
 * object code format:                    nm.                  (line 398)
 * object code format <1>:                objdump.             (line  93)
 * object code format <2>:                size.                (line 103)
-* object code format <3>:                strings.             (line 116)
+* object code format <3>:                strings.             (line 120)
 * object code format <4>:                addr2line.           (line  81)
 * object file header:                    objdump.             (line 202)
 * object file information:               objdump.             (line   6)
@@ -6020,26 +6024,26 @@ Node: objdump81922
 Node: ranlib117208
 Node: size118807
 Node: strings122776
-Node: strip128326
-Node: c++filt138168
-Ref: c++filt-Footnote-1144029
-Node: addr2line144135
-Node: windmc149813
-Node: windres153472
-Node: dlltool160042
-Node: def file format173039
-Node: readelf175569
-Node: elfedit193857
-Node: Common Options197283
-Node: Selecting the Target System198317
-Node: Target Selection199245
-Node: Architecture Selection201226
-Node: debuginfod202054
-Node: Reporting Bugs202813
-Node: Bug Criteria203575
-Node: Bug Reporting204128
-Node: GNU Free Documentation License210995
-Node: Binutils Index236155
+Node: strip128631
+Node: c++filt138473
+Ref: c++filt-Footnote-1144334
+Node: addr2line144440
+Node: windmc150118
+Node: windres153777
+Node: dlltool160347
+Node: def file format173344
+Node: readelf175874
+Node: elfedit194162
+Node: Common Options197588
+Node: Selecting the Target System198622
+Node: Target Selection199550
+Node: Architecture Selection201531
+Node: debuginfod202359
+Node: Reporting Bugs203118
+Node: Bug Criteria203880
+Node: Bug Reporting204433
+Node: GNU Free Documentation License211300
+Node: Binutils Index236460
 
 End Tag Table
 
