@@ -921,7 +921,7 @@ equivalent.
 
 '-U [D|I|L|E|X|H]'
 '--unicode=[DEFAULT|INVALID|LOCALE|ESCAPE|HEX|HIGHLIGHT]'
-     Controls the display of UTF-8 encoded mulibyte characters in
+     Controls the display of UTF-8 encoded multibyte characters in
      strings.  The default ('--unicode=default') is to give them no
      special treatment.  The '--unicode=locale' option displays the
      sequence in the current locale, which may or may not support them.
@@ -2768,7 +2768,7 @@ given.
 
 '-U [D|I|L|E|X|H]'
 '--unicode=[DEFAULT|INVALID|LOCALE|ESCAPE|HEX|HIGHLIGHT]'
-     Controls the display of UTF-8 encoded mulibyte characters in
+     Controls the display of UTF-8 encoded multibyte characters in
      strings.  The default ('--unicode=default') is to give them no
      special treatment.  The '--unicode=locale' option displays the
      sequence in the current locale, which may or may not support them.
@@ -2980,7 +2980,7 @@ File: binutils.info,  Node: strings,  Next: strip,  Prev: size,  Up: Top
              [-] [--all] [--print-file-name]
              [-T BFDNAME] [--target=BFDNAME]
              [-w] [--include-all-whitespace]
-             [-s] [--output-separatorSEP_STRING]
+             [-s] [--output-separator SEP_STRING]
              [--help] [--version] FILE...
 
    For each FILE given, GNU 'strings' prints the printable character
@@ -3065,7 +3065,7 @@ files.
 
 '-U [D|I|L|E|X|H]'
 '--unicode=[DEFAULT|INVALID|LOCALE|ESCAPE|HEX|HIGHLIGHT]'
-     Controls the display of UTF-8 encoded mulibyte characters in
+     Controls the display of UTF-8 encoded multibyte characters in
      strings.  The default ('--unicode=default') is to give them no
      special treatment, and instead rely upon the setting of the
      '--encoding' option.  The other values for this option
@@ -6019,31 +6019,31 @@ Node: ar3560
 Node: ar cmdline6894
 Node: ar scripts20016
 Node: nm25702
-Node: objcopy41074
-Node: objdump81922
-Node: ranlib117208
-Node: size118807
-Node: strings122776
-Node: strip128631
-Node: c++filt138473
-Ref: c++filt-Footnote-1144334
-Node: addr2line144440
-Node: windmc150118
-Node: windres153777
-Node: dlltool160347
-Node: def file format173344
-Node: readelf175874
-Node: elfedit194162
-Node: Common Options197588
-Node: Selecting the Target System198622
-Node: Target Selection199550
-Node: Architecture Selection201531
-Node: debuginfod202359
-Node: Reporting Bugs203118
-Node: Bug Criteria203880
-Node: Bug Reporting204433
-Node: GNU Free Documentation License211300
-Node: Binutils Index236460
+Node: objcopy41075
+Node: objdump81923
+Node: ranlib117210
+Node: size118809
+Node: strings122778
+Node: strip128635
+Node: c++filt138477
+Ref: c++filt-Footnote-1144338
+Node: addr2line144444
+Node: windmc150122
+Node: windres153781
+Node: dlltool160351
+Node: def file format173348
+Node: readelf175878
+Node: elfedit194166
+Node: Common Options197592
+Node: Selecting the Target System198626
+Node: Target Selection199554
+Node: Architecture Selection201535
+Node: debuginfod202363
+Node: Reporting Bugs203122
+Node: Bug Criteria203884
+Node: Bug Reporting204437
+Node: GNU Free Documentation License211304
+Node: Binutils Index236464
 
 End Tag Table
 
