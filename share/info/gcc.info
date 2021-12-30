@@ -182,7 +182,7 @@ diagnostics).
 9899:1999, and is commonly known as "C99".  (While in development,
 drafts of this standard version were referred to as "C9X".) GCC has
 substantially complete support for this standard version; see
-<http://gcc.gnu.org/c99status.html> for details.  To select this
+<https://gcc.gnu.org/c99status.html> for details.  To select this
 standard, use '-std=c99' or '-std=iso9899:1999'.
 
  Errors in the 1999 ISO C standard were corrected in three Technical
@@ -265,7 +265,7 @@ the 'trap' pattern, then GCC emits a call to 'abort'.
 
  For references to Technical Corrigenda, Rationale documents and
 information concerning the history of C that is available online, see
-<http://gcc.gnu.org/readings.html>
+<https://gcc.gnu.org/readings.html>
 
 2.2 C++ Language
 ================
@@ -382,7 +382,7 @@ GCC 4.0, and to produce an error if one of the new features is used.
      <https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html>
 
  For more information concerning the history of Objective-C that is
-available online, see <http://gcc.gnu.org/readings.html>
+available online, see <https://gcc.gnu.org/readings.html>
 
 2.4 Go Language
 ===============
@@ -2577,8 +2577,8 @@ accepts:
           ISO C99.  This standard is substantially completely supported,
           modulo bugs and floating-point issues (mainly but not entirely
           relating to optional C99 features from Annexes F and G). See
-          <http://gcc.gnu.org/c99status.html> for more information.  The
-          names 'c9x' and 'iso9899:199x' are deprecated.
+          <https://gcc.gnu.org/c99status.html> for more information.
+          The names 'c9x' and 'iso9899:199x' are deprecated.
 
      'c11'
      'c1x'
@@ -6285,7 +6285,7 @@ unless optimization is enabled.
      over the precise meaning of the sequence point rules in subtle
      cases.  Links to discussions of the problem, including proposed
      formal definitions, may be found on the GCC readings page, at
-     <http://gcc.gnu.org/readings.html>.
+     <https://gcc.gnu.org/readings.html>.
 
      This warning is enabled by '-Wall' for C and C++.
 
@@ -15359,6 +15359,9 @@ doing a link step.
 '-fuse-ld=lld'
      Use the LLVM 'lld' linker instead of the default linker.
 
+'-fuse-ld=mold'
+     Use the Modern Linker ('mold') instead of the default linker.
+
 '-lLIBRARY'
 '-l LIBRARY'
      Search the library named LIBRARY when linking.  (The second
@@ -16423,7 +16426,7 @@ form by either removing 'no-' or adding it.
      that the 'type_info' nodes are unified between the DSOs.
 
      An overview of these techniques, their benefits and how to use them
-     is at <http://gcc.gnu.org/wiki/Visibility>.
+     is at <https://gcc.gnu.org/wiki/Visibility>.
 
 '-fstrict-volatile-bitfields'
      This option should be used if accesses to volatile bit-fields (or
@@ -23323,7 +23326,7 @@ File: gcc.info,  Node: MIPS Options,  Next: MMIX Options,  Prev: MicroBlaze Opti
      you can use '-mgp32' to get 32-bit code instead.
 
      For information about the O64 ABI, see
-     <http://gcc.gnu.org/projects/mipso64-abi.html>.
+     <https://gcc.gnu.org/projects/mipso64-abi.html>.
 
      GCC supports a variant of the o32 ABI in which floating-point
      registers are 64 rather than 32 bits wide.  You can select this
@@ -31162,8 +31165,8 @@ version of the standard.
  Some choices depend on the externally determined ABI for the platform
 (including standard character encodings) which GCC follows; these are
 listed as "determined by ABI" below.  *Note Binary Compatibility:
-Compatibility, and <http://gcc.gnu.org/readings.html>.  Some choices are
-documented in the preprocessor manual.  *Note Implementation-defined
+Compatibility, and <https://gcc.gnu.org/readings.html>.  Some choices
+are documented in the preprocessor manual.  *Note Implementation-defined
 behavior: (cpp)Implementation-defined behavior.  Some choices are made
 by the library and operating system (or other environment when compiling
 for a freestanding environment); refer to their documentation for
@@ -31812,8 +31815,8 @@ version of the standard.
  Some choices depend on the externally determined ABI for the platform
 (including standard character encodings) which GCC follows; these are
 listed as "determined by ABI" below.  *Note Binary Compatibility:
-Compatibility, and <http://gcc.gnu.org/readings.html>.  Some choices are
-documented in the preprocessor manual.  *Note Implementation-defined
+Compatibility, and <https://gcc.gnu.org/readings.html>.  Some choices
+are documented in the preprocessor manual.  *Note Implementation-defined
 behavior: (cpp)Implementation-defined behavior.  Some choices are
 documented in the corresponding document for the C language.  *Note C
 Implementation::.  Some choices are made by the library and operating
@@ -45235,7 +45238,7 @@ All objects must be the same size.
  There are 6 different memory orders that can be specified.  These map
 to the C++11 memory orders with the same names, see the C++11 standard
 or the GCC wiki on atomic synchronization
-(http://gcc.gnu.org/wiki/Atomic/GCCMM/AtomicSync) for detailed
+(https://gcc.gnu.org/wiki/Atomic/GCCMM/AtomicSync) for detailed
 definitions.  Individual targets may also support additional memory
 orders for use on specific architectures.  Refer to the target
 documentation for details of these.
@@ -56392,7 +56395,7 @@ different target string.  Function foo is called or a pointer to it is
 taken just like a regular function.  GCC takes care of doing the
 dispatching to call the right version at runtime.  Refer to the GCC wiki
 on Function Multiversioning
-(http://gcc.gnu.org/wiki/FunctionMultiVersioning) for more details.
+(https://gcc.gnu.org/wiki/FunctionMultiVersioning) for more details.
 
 
 File: gcc.info,  Node: Type Traits,  Next: C++ Concepts,  Prev: Function Multiversioning,  Up: C++ Extensions
@@ -60154,7 +60157,7 @@ to find it:
      fee.  The service directory is found at
      <https://www.fsf.org/resources/service>.
 
- For further information, see <http://gcc.gnu.org/faq.html#support>.
+ For further information, see <https://gcc.gnu.org/faq.html#support>.
 
 
 File: gcc.info,  Node: Contributing,  Next: Funding,  Prev: Service,  Up: Top
@@ -60164,18 +60167,18 @@ File: gcc.info,  Node: Contributing,  Next: Funding,  Prev: Service,  Up: Top
 
 If you would like to help pretest GCC releases to assure they work well,
 current development sources are available via Git (see
-<http://gcc.gnu.org/git.html>).  Source and binary snapshots are also
-available for FTP; see <http://gcc.gnu.org/snapshots.html>.
+<https://gcc.gnu.org/git.html>).  Source and binary snapshots are also
+available for FTP; see <https://gcc.gnu.org/snapshots.html>.
 
  If you would like to work on improvements to GCC, please read the
 advice at these URLs:
 
-     <http://gcc.gnu.org/contribute.html>
-     <http://gcc.gnu.org/contributewhy.html>
+     <https://gcc.gnu.org/contribute.html>
+     <https://gcc.gnu.org/contributewhy.html>
 
 for information on how to make useful contributions and avoid
 duplication of effort.  Suggested projects are listed at
-<http://gcc.gnu.org/projects/>.
+<https://gcc.gnu.org/projects/>.
 
 
 File: gcc.info,  Node: Funding,  Next: GNU Project,  Prev: Contributing,  Up: Top
@@ -60241,8 +60244,8 @@ now widely used; though these systems are often referred to as "Linux",
 they are more accurately called GNU/Linux systems.
 
  For more information, see:
-     <http://www.gnu.org/>
-     <http://www.gnu.org/gnu/linux-and-gnu.html>
+     <https://www.gnu.org/>
+     <https://www.gnu.org/gnu/linux-and-gnu.html>
 
 
 File: gcc.info,  Node: Copying,  Next: GNU Free Documentation License,  Prev: GNU Project,  Up: Top
@@ -60252,7 +60255,7 @@ GNU General Public License
 
                         Version 3, 29 June 2007
 
-     Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+     Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
 
      Everyone is permitted to copy and distribute verbatim copies of this
      license document, but changing it is not allowed.
@@ -60930,7 +60933,7 @@ the exclusion of warranty; and each file should have at least the
      General Public License for more details.
 
      You should have received a copy of the GNU General Public License
-     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
  Also add information on how to contact you by electronic and paper
 mail.
@@ -60951,7 +60954,7 @@ use an "about box".
  You should also get your employer (if you work as a programmer) or
 school, if any, to sign a "copyright disclaimer" for the program, if
 necessary.  For more information on this, and how to apply and follow
-the GNU GPL, see <http://www.gnu.org/licenses/>.
+the GNU GPL, see <https://www.gnu.org/licenses/>.
 
  The GNU General Public License does not permit incorporating your
 program into proprietary programs.  If your program is a subroutine
@@ -60969,7 +60972,7 @@ GNU Free Documentation License
                      Version 1.3, 3 November 2008
 
      Copyright (C) 2000, 2001, 2002, 2007, 2008 Free Software Foundation, Inc.
-     <http://fsf.org/>
+     <https://fsf.org/>
 
      Everyone is permitted to copy and distribute verbatim copies
      of this license document, but changing it is not allowed.
@@ -61366,7 +61369,7 @@ GNU Free Documentation License
      the GNU Free Documentation License from time to time.  Such new
      versions will be similar in spirit to the present version, but may
      differ in detail to address new problems or concerns.  See
-     <http://www.gnu.org/copyleft/>.
+     <https://www.gnu.org/copyleft/>.
 
      Each version of the License is given a distinguishing version
      number.  If the Document specifies that a particular numbered
@@ -62846,14 +62849,14 @@ look up both forms.
 * dynamiclib:                            Darwin Options.     (line  131)
 * E:                                     Overall Options.    (line  186)
 * E <1>:                                 Link Options.       (line   20)
-* e:                                     Link Options.       (line  169)
+* e:                                     Link Options.       (line  172)
 * EB:                                    ARC Options.        (line  590)
 * EB <1>:                                C-SKY Options.      (line   29)
 * EB <2>:                                MIPS Options.       (line    7)
 * EL:                                    ARC Options.        (line  599)
 * EL <1>:                                C-SKY Options.      (line   31)
 * EL <2>:                                MIPS Options.       (line   10)
-* entry:                                 Link Options.       (line  169)
+* entry:                                 Link Options.       (line  172)
 * exported_symbols_list:                 Darwin Options.     (line  196)
 * F:                                     Darwin Options.     (line   31)
 * fabi-compat-version:                   C++ Dialect Options.
@@ -63810,6 +63813,7 @@ look up both forms.
 * fuse-ld=bfd:                           Link Options.       (line   74)
 * fuse-ld=gold:                          Link Options.       (line   77)
 * fuse-ld=lld:                           Link Options.       (line   80)
+* fuse-ld=mold:                          Link Options.       (line   83)
 * fuse-linker-plugin:                    Optimize Options.   (line 2132)
 * fvar-tracking:                         Debugging Options.  (line  183)
 * fvar-tracking-assignments:             Debugging Options.  (line  193)
@@ -63917,9 +63921,9 @@ look up both forms.
 * iwithprefix:                           Directory Options.  (line   86)
 * iwithprefixbefore:                     Directory Options.  (line   86)
 * keep_private_externs:                  Darwin Options.     (line  196)
-* l:                                     Link Options.       (line   84)
+* l:                                     Link Options.       (line   87)
 * L:                                     Directory Options.  (line  118)
-* lobjc:                                 Link Options.       (line  110)
+* lobjc:                                 Link Options.       (line  113)
 * M:                                     Preprocessor Options.
                                                              (line   77)
 * m:                                     RS/6000 and PowerPC Options.
@@ -65836,27 +65840,27 @@ look up both forms.
 * no-canonical-prefixes:                 Directory Options.  (line  164)
 * no-integrated-cpp:                     Preprocessor Options.
                                                              (line  483)
-* no-pie:                                Link Options.       (line  181)
+* no-pie:                                Link Options.       (line  184)
 * no-sysroot-suffix:                     Directory Options.  (line  183)
 * noall_load:                            Darwin Options.     (line  196)
 * nocpp:                                 MIPS Options.       (line  642)
-* nodefaultlibs:                         Link Options.       (line  119)
+* nodefaultlibs:                         Link Options.       (line  122)
 * nodevicelib:                           AVR Options.        (line  290)
 * nodevicespecs:                         AVR Options.        (line  293)
 * nofixprebinding:                       Darwin Options.     (line  196)
 * nofpu:                                 RX Options.         (line   17)
-* nolibc:                                Link Options.       (line  131)
+* nolibc:                                Link Options.       (line  134)
 * nolibdld:                              HPPA Options.       (line  188)
 * nomultidefs:                           Darwin Options.     (line  196)
 * non-static:                            VxWorks Options.    (line   16)
 * noprebind:                             Darwin Options.     (line  196)
 * noseglinkedit:                         Darwin Options.     (line  196)
-* nostartfiles:                          Link Options.       (line  114)
+* nostartfiles:                          Link Options.       (line  117)
 * nostdinc:                              Directory Options.  (line  102)
 * nostdinc++:                            C++ Dialect Options.
                                                              (line  547)
 * nostdinc++ <1>:                        Directory Options.  (line  108)
-* nostdlib:                              Link Options.       (line  143)
+* nostdlib:                              Link Options.       (line  146)
 * no_dead_strip_inits_and_terms:         Darwin Options.     (line  196)
 * o:                                     Overall Options.    (line  193)
 * O:                                     Optimize Options.   (line   39)
@@ -65892,7 +65896,7 @@ look up both forms.
                                                              (line   20)
 * pg <1>:                                Common Function Attributes.
                                                              (line  806)
-* pie:                                   Link Options.       (line  175)
+* pie:                                   Link Options.       (line  178)
 * pipe:                                  Overall Options.    (line  605)
 * plt:                                   RISC-V Options.     (line   13)
 * prebind:                               Darwin Options.     (line  196)
@@ -65912,19 +65916,19 @@ look up both forms.
 * private_bundle:                        Darwin Options.     (line  196)
 * pthread:                               Preprocessor Options.
                                                              (line   70)
-* pthread <1>:                           Link Options.       (line  192)
+* pthread <1>:                           Link Options.       (line  195)
 * pthreads:                              Solaris 2 Options.  (line   30)
 * Q:                                     Developer Options.  (line  839)
 * Qn:                                    System V Options.   (line   18)
 * Qy:                                    System V Options.   (line   14)
-* r:                                     Link Options.       (line  199)
-* rdynamic:                              Link Options.       (line  203)
+* r:                                     Link Options.       (line  202)
+* rdynamic:                              Link Options.       (line  206)
 * read_only_relocs:                      Darwin Options.     (line  196)
 * remap:                                 Preprocessor Options.
                                                              (line  399)
 * S:                                     Overall Options.    (line  176)
 * S <1>:                                 Link Options.       (line   20)
-* s:                                     Link Options.       (line  210)
+* s:                                     Link Options.       (line  213)
 * save-temps:                            Developer Options.  (line  735)
 * save-temps=cwd:                        Developer Options.  (line  746)
 * save-temps=obj:                        Developer Options.  (line  749)
@@ -65943,24 +65947,24 @@ look up both forms.
 * segs_read_write_addr <1>:              Darwin Options.     (line  196)
 * seg_addr_table:                        Darwin Options.     (line  196)
 * seg_addr_table_filename:               Darwin Options.     (line  196)
-* shared:                                Link Options.       (line  219)
-* shared-libgcc:                         Link Options.       (line  227)
+* shared:                                Link Options.       (line  222)
+* shared-libgcc:                         Link Options.       (line  230)
 * short-calls:                           Adapteva Epiphany Options.
                                                              (line   61)
 * sim:                                   CRIS Options.       (line   95)
 * sim2:                                  CRIS Options.       (line  101)
 * single_module:                         Darwin Options.     (line  196)
 * specs:                                 Overall Options.    (line  611)
-* static:                                Link Options.       (line  214)
+* static:                                Link Options.       (line  217)
 * static <1>:                            Darwin Options.     (line  196)
 * static <2>:                            HPPA Options.       (line  192)
-* static-libasan:                        Link Options.       (line  261)
-* static-libgcc:                         Link Options.       (line  227)
-* static-liblsan:                        Link Options.       (line  277)
-* static-libstdc++:                      Link Options.       (line  294)
-* static-libtsan:                        Link Options.       (line  269)
-* static-libubsan:                       Link Options.       (line  285)
-* static-pie:                            Link Options.       (line  184)
+* static-libasan:                        Link Options.       (line  264)
+* static-libgcc:                         Link Options.       (line  230)
+* static-liblsan:                        Link Options.       (line  280)
+* static-libstdc++:                      Link Options.       (line  297)
+* static-libtsan:                        Link Options.       (line  272)
+* static-libubsan:                       Link Options.       (line  288)
+* static-pie:                            Link Options.       (line  187)
 * std:                                   Standards.          (line   13)
 * std <1>:                               C Dialect Options.  (line   46)
 * std <2>:                               Other Builtins.     (line   31)
@@ -65969,9 +65973,9 @@ look up both forms.
                                                              (line  570)
 * sub_library:                           Darwin Options.     (line  196)
 * sub_umbrella:                          Darwin Options.     (line  196)
-* symbolic:                              Link Options.       (line  305)
+* symbolic:                              Link Options.       (line  308)
 * sysroot:                               Directory Options.  (line  168)
-* T:                                     Link Options.       (line  311)
+* T:                                     Link Options.       (line  314)
 * target-help:                           Overall Options.    (line  487)
 * threads:                               HPPA Options.       (line  205)
 * time:                                  Developer Options.  (line  755)
@@ -65987,7 +65991,7 @@ look up both forms.
 * twolevel_namespace:                    Darwin Options.     (line  196)
 * U:                                     Preprocessor Options.
                                                              (line   42)
-* u:                                     Link Options.       (line  343)
+* u:                                     Link Options.       (line  346)
 * umbrella:                              Darwin Options.     (line  196)
 * undef:                                 Preprocessor Options.
                                                              (line   66)
@@ -66227,7 +66231,7 @@ look up both forms.
                                                              (line 1255)
 * Winvalid-pch:                          Warning Options.    (line 3167)
 * Wjump-misses-init:                     Warning Options.    (line 2612)
-* Wl:                                    Link Options.       (line  335)
+* Wl:                                    Link Options.       (line  338)
 * Wlarger-than-BYTE-SIZE:                Warning Options.    (line 2208)
 * Wlarger-than=:                         Warning Options.    (line 2208)
 * Wliteral-suffix:                       C++ Dialect Options.
@@ -66869,12 +66873,12 @@ look up both forms.
 * Xassembler:                            Assembler Options.  (line   13)
 * Xbind-lazy:                            VxWorks Options.    (line   26)
 * Xbind-now:                             VxWorks Options.    (line   30)
-* Xlinker:                               Link Options.       (line  317)
+* Xlinker:                               Link Options.       (line  320)
 * Xpreprocessor:                         Preprocessor Options.
                                                              (line  474)
 * Ym:                                    System V Options.   (line   26)
 * YP:                                    System V Options.   (line   22)
-* z:                                     Link Options.       (line  348)
+* z:                                     Link Options.       (line  351)
 
 
 File: gcc.info,  Node: Keyword Index,  Prev: Option Index,  Up: Top
@@ -66902,12 +66906,12 @@ Keyword Index
 * *__builtin_alloca_with_align:          Other Builtins.     (line  166)
 * *__builtin_alloca_with_align_and_max:  Other Builtins.     (line  211)
 * + in constraint:                       Modifiers.          (line   12)
-* -lgcc, use with -nodefaultlibs:        Link Options.       (line  154)
-* -lgcc, use with -nostdlib:             Link Options.       (line  154)
+* -lgcc, use with -nodefaultlibs:        Link Options.       (line  157)
+* -lgcc, use with -nostdlib:             Link Options.       (line  157)
 * -march feature modifiers:              AArch64 Options.    (line  331)
 * -mcpu feature modifiers:               AArch64 Options.    (line  331)
-* -nodefaultlibs and unresolved references: Link Options.    (line  154)
-* -nostdlib and unresolved references:   Link Options.       (line  154)
+* -nodefaultlibs and unresolved references: Link Options.    (line  157)
+* -nostdlib and unresolved references:   Link Options.       (line  157)
 * .sdata/.sdata2 references (PowerPC):   RS/6000 and PowerPC Options.
                                                              (line  714)
 * //:                                    C++ Comments.       (line    6)
@@ -68361,11 +68365,11 @@ Keyword Index
 * lgammal:                               Other Builtins.     (line    6)
 * lgammal_r:                             Other Builtins.     (line    6)
 * lgamma_r:                              Other Builtins.     (line    6)
-* Libraries:                             Link Options.       (line   82)
+* Libraries:                             Link Options.       (line   85)
 * LIBRARY_PATH:                          Environment Variables.
                                                              (line   97)
 * link options:                          Link Options.       (line    6)
-* linker script:                         Link Options.       (line  311)
+* linker script:                         Link Options.       (line  314)
 * lk fixed-suffix:                       Fixed-Point.        (line    6)
 * LK fixed-suffix:                       Fixed-Point.        (line    6)
 * LL integer suffix:                     Long Long.          (line    6)
@@ -69487,8 +69491,8 @@ Keyword Index
 * union, casting to a:                   Cast to Union.      (line    6)
 * unions:                                Incompatibilities.  (line  146)
 * unknown pragmas, warning:              Warning Options.    (line 1380)
-* unresolved references and -nodefaultlibs: Link Options.    (line  154)
-* unresolved references and -nostdlib:   Link Options.       (line  154)
+* unresolved references and -nodefaultlibs: Link Options.    (line  157)
+* unresolved references and -nostdlib:   Link Options.       (line  157)
 * unused function attribute:             Common Function Attributes.
                                                              (line 1310)
 * unused label attribute:                Label Attributes.   (line   32)
@@ -69704,438 +69708,438 @@ Tag Table:
 Node: Top2135
 Node: G++ and GCC4115
 Node: Standards6161
-Node: Invoking GCC19785
-Node: Option Summary25012
-Node: Overall Options83204
-Node: Invoking G++110730
-Node: C Dialect Options112253
-Node: C++ Dialect Options133292
-Node: Objective-C and Objective-C++ Dialect Options192704
-Node: Diagnostic Message Formatting Options204451
-Node: Warning Options235024
-Ref: Wtrigraphs338893
-Node: Static Analyzer Options381384
-Node: Debugging Options401010
-Node: Optimize Options422247
-Ref: Type-punning494407
-Node: Instrumentation Options613791
-Node: Preprocessor Options659996
-Ref: dashMF664843
-Ref: fdollars-in-identifiers669505
-Node: Assembler Options682710
-Node: Link Options683401
-Ref: Link Options-Footnote-1700277
-Node: Directory Options700613
-Node: Code Gen Options709016
-Node: Developer Options737888
-Node: Submodel Options779273
-Node: AArch64 Options781083
-Ref: aarch64-feature-modifiers796629
-Node: Adapteva Epiphany Options802190
-Node: AMD GCN Options808142
-Node: ARC Options809705
-Node: ARM Options830474
-Node: AVR Options871737
-Node: Blackfin Options898274
-Node: C6X Options906166
-Node: CRIS Options907709
-Node: CR16 Options911448
-Node: C-SKY Options912360
-Node: Darwin Options918087
-Node: DEC Alpha Options925528
-Node: eBPF Options937144
-Node: FR30 Options939520
-Node: FT32 Options940080
-Node: FRV Options941026
-Node: GNU/Linux Options947790
-Node: H8/300 Options949171
-Node: HPPA Options950623
-Node: IA-64 Options960155
-Node: LM32 Options968283
-Node: M32C Options968806
-Node: M32R/D Options970079
-Node: M680x0 Options973624
-Node: MCore Options987779
-Node: MeP Options989281
-Node: MicroBlaze Options993241
-Node: MIPS Options996306
-Node: MMIX Options1033102
-Node: MN10300 Options1035579
-Node: Moxie Options1038122
-Node: MSP430 Options1038609
-Node: NDS32 Options1046370
-Node: Nios II Options1048540
-Node: Nvidia PTX Options1061756
-Node: OpenRISC Options1064448
-Node: PDP-11 Options1067202
-Node: picoChip Options1068451
-Node: PowerPC Options1070589
-Node: PRU Options1070809
-Node: RISC-V Options1073018
-Node: RL78 Options1080670
-Node: RS/6000 and PowerPC Options1084445
-Node: RX Options1125961
-Node: S/390 and zSeries Options1134563
-Node: Score Options1145342
-Node: SH Options1146191
-Node: Solaris 2 Options1161331
-Node: SPARC Options1162569
-Node: System V Options1178221
-Node: TILE-Gx Options1179049
-Node: TILEPro Options1180067
-Node: V850 Options1180571
-Node: VAX Options1187258
-Node: Visium Options1187950
-Node: VMS Options1190258
-Node: VxWorks Options1191074
-Node: x86 Options1192226
-Node: x86 Windows Options1259135
-Node: Xstormy16 Options1261941
-Node: Xtensa Options1262235
-Node: zSeries Options1268371
-Node: Spec Files1268567
-Node: Environment Variables1294646
-Node: Precompiled Headers1304079
-Node: C++ Modules1310288
-Ref: C++ Modules-Footnote-11316428
-Node: C++ Module Mapper1316681
-Node: C++ Module Preprocessing1321834
-Node: C++ Compiled Module Interface1323663
-Ref: C++ Compiled Module Interface-Footnote-11327047
-Ref: C++ Compiled Module Interface-Footnote-21327136
-Node: C Implementation1327192
-Node: Translation implementation1328882
-Node: Environment implementation1329473
-Node: Identifiers implementation1330027
-Node: Characters implementation1331113
-Node: Integers implementation1334763
-Node: Floating point implementation1336812
-Node: Arrays and pointers implementation1339875
-Ref: Arrays and pointers implementation-Footnote-11341335
-Node: Hints implementation1341461
-Node: Structures unions enumerations and bit-fields implementation1342956
-Node: Qualifiers implementation1345180
-Node: Declarators implementation1347241
-Node: Statements implementation1347582
-Node: Preprocessing directives implementation1347908
-Node: Library functions implementation1350229
-Node: Architecture implementation1350878
-Node: Locale-specific behavior implementation1352523
-Node: C++ Implementation1352828
-Node: Conditionally-supported behavior1354111
-Node: Exception handling1354728
-Node: C Extensions1355195
-Node: Statement Exprs1360418
-Node: Local Labels1365790
-Node: Labels as Values1368763
-Ref: Labels as Values-Footnote-11371290
-Node: Nested Functions1371475
-Node: Nonlocal Gotos1375429
-Node: Constructing Calls1377695
-Node: Typeof1382410
-Node: Conditionals1386339
-Node: __int1281387228
-Node: Long Long1387753
-Node: Complex1389244
-Node: Floating Types1392012
-Node: Half-Precision1395533
-Node: Decimal Float1399001
-Node: Hex Floats1400855
-Node: Fixed-Point1401929
-Node: Named Address Spaces1405187
-Ref: AVR Named Address Spaces1405873
-Node: Zero Length1413167
-Node: Empty Structures1417348
-Node: Variable Length1417754
-Node: Variadic Macros1420472
-Node: Escaped Newlines1422850
-Node: Subscripting1423711
-Node: Pointer Arith1424436
-Node: Variadic Pointer Args1425013
-Node: Pointers to Arrays1425738
-Node: Initializers1426491
-Node: Compound Literals1426992
-Node: Designated Inits1430559
-Node: Case Ranges1434483
-Node: Cast to Union1435164
-Node: Mixed Labels and Declarations1436898
-Node: Function Attributes1437535
-Node: Common Function Attributes1442002
-Ref: Common Function Attributes-Footnote-11517535
-Node: AArch64 Function Attributes1517852
-Node: AMD GCN Function Attributes1524046
-Node: ARC Function Attributes1527099
-Node: ARM Function Attributes1530036
-Node: AVR Function Attributes1535175
-Node: Blackfin Function Attributes1539710
-Node: BPF Function Attributes1542207
-Node: CR16 Function Attributes1542795
-Node: C-SKY Function Attributes1543314
-Node: Epiphany Function Attributes1544613
-Node: H8/300 Function Attributes1547368
-Node: IA-64 Function Attributes1548566
-Node: M32C Function Attributes1549608
-Node: M32R/D Function Attributes1551946
-Node: m68k Function Attributes1553420
-Node: MCORE Function Attributes1554364
-Node: MeP Function Attributes1555175
-Node: MicroBlaze Function Attributes1556476
-Node: Microsoft Windows Function Attributes1557983
-Node: MIPS Function Attributes1562552
-Node: MSP430 Function Attributes1568170
-Node: NDS32 Function Attributes1572249
-Node: Nios II Function Attributes1574673
-Node: Nvidia PTX Function Attributes1575970
-Node: PowerPC Function Attributes1576585
-Node: RISC-V Function Attributes1583359
-Node: RL78 Function Attributes1584775
-Node: RX Function Attributes1586014
-Node: S/390 Function Attributes1588561
-Node: SH Function Attributes1590389
-Node: Symbian OS Function Attributes1593817
-Node: V850 Function Attributes1594153
-Node: Visium Function Attributes1594698
-Node: x86 Function Attributes1595226
-Node: Xstormy16 Function Attributes1619028
-Node: Variable Attributes1619535
-Node: Common Variable Attributes1621068
-Node: ARC Variable Attributes1642975
-Node: AVR Variable Attributes1643357
-Node: Blackfin Variable Attributes1648519
-Node: H8/300 Variable Attributes1649377
-Node: IA-64 Variable Attributes1650450
-Node: M32R/D Variable Attributes1651201
-Node: MeP Variable Attributes1651984
-Node: Microsoft Windows Variable Attributes1654077
-Node: MSP430 Variable Attributes1656530
-Node: Nvidia PTX Variable Attributes1657744
-Node: PowerPC Variable Attributes1658361
-Node: RL78 Variable Attributes1658918
-Node: V850 Variable Attributes1659337
-Node: x86 Variable Attributes1659970
-Node: Xstormy16 Variable Attributes1661026
-Node: Type Attributes1661596
-Node: Common Type Attributes1663284
-Node: ARC Type Attributes1685645
-Node: ARM Type Attributes1686117
-Node: BPF Type Attributes1686899
-Node: MeP Type Attributes1687416
-Node: PowerPC Type Attributes1687818
-Node: x86 Type Attributes1688807
-Node: Label Attributes1689799
-Node: Enumerator Attributes1691826
-Node: Statement Attributes1693358
-Node: Attribute Syntax1694841
-Node: Function Prototypes1706099
-Node: C++ Comments1707879
-Node: Dollar Signs1708398
-Node: Character Escapes1708863
-Node: Alignment1709147
-Node: Inline1710800
-Node: Volatiles1715617
-Node: Using Assembly Language with C1718516
-Node: Basic Asm1719753
-Node: Extended Asm1725376
-Ref: Volatile1729490
-Ref: AssemblerTemplate1733603
-Ref: OutputOperands1737843
-Ref: FlagOutputOperands1744806
-Ref: InputOperands1747753
-Ref: Clobbers and Scratch Registers1752021
-Ref: GotoLabels1760662
-Ref: x86Operandmodifiers1764285
-Ref: x86floatingpointasmoperands1769101
-Ref: msp430Operandmodifiers1772430
-Node: Constraints1774088
-Node: Simple Constraints1775194
-Node: Multi-Alternative1782508
-Node: Modifiers1784183
-Node: Machine Constraints1786982
-Node: Asm Labels1843808
-Node: Explicit Register Variables1845428
-Ref: Explicit Reg Vars1845642
-Node: Global Register Variables1846251
-Ref: Global Reg Vars1846459
-Node: Local Register Variables1851241
-Ref: Local Reg Vars1851461
-Node: Size of an asm1855089
-Node: Alternate Keywords1856567
-Node: Incomplete Enums1858072
-Node: Function Names1858829
-Node: Return Address1860733
-Node: Vector Extensions1865320
-Node: Offsetof1876303
-Node: __sync Builtins1877136
-Node: __atomic Builtins1883579
-Node: Integer Overflow Builtins1897204
-Node: x86 specific memory model extensions for transactional memory1903687
-Node: Object Size Checking1904953
-Node: Other Builtins1911969
-Node: Target Builtins1964300
-Node: AArch64 Built-in Functions1966075
-Node: Alpha Built-in Functions1966771
-Node: Altera Nios II Built-in Functions1969865
-Node: ARC Built-in Functions1974304
-Node: ARC SIMD Built-in Functions1979516
-Node: ARM iWMMXt Built-in Functions1988514
-Node: ARM C Language Extensions (ACLE)1995650
-Node: ARM Floating Point Status and Control Intrinsics1996927
-Node: ARM ARMv8-M Security Extensions1997412
-Node: AVR Built-in Functions1998704
-Node: Blackfin Built-in Functions2002470
-Node: BPF Built-in Functions2003090
-Node: FR-V Built-in Functions2004549
-Node: Argument Types2005412
-Node: Directly-mapped Integer Functions2007243
-Node: Directly-mapped Media Functions2008403
-Node: Raw read/write Functions2016685
-Node: Other Built-in Functions2017593
-Node: MIPS DSP Built-in Functions2018779
-Node: MIPS Paired-Single Support2031534
-Node: MIPS Loongson Built-in Functions2033033
-Node: Paired-Single Arithmetic2039555
-Node: Paired-Single Built-in Functions2040578
-Node: MIPS-3D Built-in Functions2043245
-Node: MIPS SIMD Architecture (MSA) Support2048639
-Node: MIPS SIMD Architecture Built-in Functions2051479
-Node: Other MIPS Built-in Functions2078333
-Node: MSP430 Built-in Functions2079342
-Node: NDS32 Built-in Functions2080743
-Node: picoChip Built-in Functions2082036
-Node: Basic PowerPC Built-in Functions2083385
-Node: Basic PowerPC Built-in Functions Available on all Configurations2084243
-Node: Basic PowerPC Built-in Functions Available on ISA 2.052092753
-Node: Basic PowerPC Built-in Functions Available on ISA 2.062097588
-Node: Basic PowerPC Built-in Functions Available on ISA 2.072099668
-Node: Basic PowerPC Built-in Functions Available on ISA 3.02100522
-Node: Basic PowerPC Built-in Functions Available on ISA 3.12107500
-Node: PowerPC AltiVec/VSX Built-in Functions2110713
-Node: PowerPC AltiVec Built-in Functions on ISA 2.052118782
-Node: PowerPC AltiVec Built-in Functions Available on ISA 2.062144182
-Node: PowerPC AltiVec Built-in Functions Available on ISA 2.072151248
-Node: PowerPC AltiVec Built-in Functions Available on ISA 3.02161058
-Node: PowerPC AltiVec Built-in Functions Available on ISA 3.12176781
-Node: PowerPC Hardware Transactional Memory Built-in Functions2210065
-Node: PowerPC Atomic Memory Operation Functions2218615
-Node: PowerPC Matrix-Multiply Assist Built-in Functions2221178
-Node: PRU Built-in Functions2227303
-Node: RISC-V Built-in Functions2228491
-Node: RX Built-in Functions2228902
-Node: S/390 System z Built-in Functions2232904
-Node: SH Built-in Functions2238134
-Node: SPARC VIS Built-in Functions2239862
-Node: TI C6X Built-in Functions2248393
-Node: TILE-Gx Built-in Functions2249444
-Node: TILEPro Built-in Functions2250569
-Node: x86 Built-in Functions2251677
-Node: x86 transactional memory intrinsics2316976
-Node: x86 control-flow protection intrinsics2320243
-Node: Target Format Checks2322014
-Node: Solaris Format Checks2322446
-Node: Darwin Format Checks2322872
-Node: Pragmas2323835
-Node: AArch64 Pragmas2324776
-Node: ARM Pragmas2325233
-Node: M32C Pragmas2325860
-Node: MeP Pragmas2326932
-Node: PRU Pragmas2328984
-Node: RS/6000 and PowerPC Pragmas2329562
-Node: S/390 Pragmas2330302
-Node: Darwin Pragmas2330868
-Node: Solaris Pragmas2331921
-Node: Symbol-Renaming Pragmas2333085
-Node: Structure-Layout Pragmas2334722
-Node: Weak Pragmas2337002
-Node: Diagnostic Pragmas2337737
-Node: Visibility Pragmas2342488
-Node: Push/Pop Macro Pragmas2343173
-Node: Function Specific Option Pragmas2344146
-Node: Loop-Specific Pragmas2346112
-Node: Unnamed Fields2347712
-Node: Thread-Local2349909
-Node: C99 Thread-Local Edits2352015
-Node: C++98 Thread-Local Edits2354013
-Node: Binary constants2357458
-Node: C++ Extensions2358129
-Node: C++ Volatiles2359759
-Node: Restricted Pointers2362107
-Node: Vague Linkage2363698
-Node: C++ Interface2367321
-Ref: C++ Interface-Footnote-12371118
-Node: Template Instantiation2371256
-Node: Bound member functions2377347
-Node: C++ Attributes2378879
-Node: Function Multiversioning2382951
-Node: Type Traits2384758
-Node: C++ Concepts2391708
-Node: Deprecated Features2393214
-Node: Backwards Compatibility2395039
-Node: Objective-C2396111
-Node: GNU Objective-C runtime API2396718
-Node: Modern GNU Objective-C runtime API2397725
-Node: Traditional GNU Objective-C runtime API2400161
-Node: Executing code before main2400888
-Node: What you can and what you cannot do in +load2403632
-Node: Type encoding2406002
-Node: Legacy type encoding2411368
-Node: @encode2412458
-Node: Method signatures2413003
-Node: Garbage Collection2414995
-Node: Constant string objects2417685
-Node: compatibility_alias2420194
-Node: Exceptions2420919
-Node: Synchronization2423629
-Node: Fast enumeration2424813
-Node: Using fast enumeration2425125
-Node: c99-like fast enumeration syntax2426336
-Node: Fast enumeration details2427039
-Node: Fast enumeration protocol2429379
-Node: Messaging with the GNU Objective-C runtime2432531
-Node: Dynamically registering methods2433903
-Node: Forwarding hook2435594
-Node: Compatibility2438634
-Node: Gcov2445190
-Node: Gcov Intro2445725
-Node: Invoking Gcov2448443
-Node: Gcov and Optimization2471176
-Node: Gcov Data Files2474929
-Node: Cross-profiling2476338
-Node: Gcov-tool2478192
-Node: Gcov-tool Intro2478617
-Node: Invoking Gcov-tool2480587
-Node: Gcov-dump2483165
-Node: Gcov-dump Intro2483488
-Node: Invoking Gcov-dump2483755
-Node: lto-dump2484412
-Node: lto-dump Intro2484711
-Node: Invoking lto-dump2484961
-Node: Trouble2486057
-Node: Actual Bugs2487474
-Node: Interoperation2487921
-Node: Incompatibilities2494812
-Node: Fixed Headers2502964
-Node: Standard Libraries2504622
-Node: Disappointments2505994
-Node: C++ Misunderstandings2510353
-Node: Static Definitions2511164
-Node: Name lookup2512217
-Ref: Name lookup-Footnote-12516998
-Node: Temporaries2517187
-Node: Copy Assignment2519163
-Node: Non-bugs2520998
-Node: Warnings and Errors2531504
-Node: Bugs2533266
-Node: Bug Criteria2533733
-Node: Bug Reporting2535943
-Node: Service2536161
-Node: Contributing2536981
-Node: Funding2537722
-Node: GNU Project2540212
-Node: Copying2540858
-Node: GNU Free Documentation License2578366
-Node: Contributors2603484
-Node: Option Index2644457
-Node: Keyword Index2940701
+Node: Invoking GCC19788
+Node: Option Summary25015
+Node: Overall Options83207
+Node: Invoking G++110733
+Node: C Dialect Options112256
+Node: C++ Dialect Options133295
+Node: Objective-C and Objective-C++ Dialect Options192707
+Node: Diagnostic Message Formatting Options204454
+Node: Warning Options235027
+Ref: Wtrigraphs338897
+Node: Static Analyzer Options381388
+Node: Debugging Options401014
+Node: Optimize Options422251
+Ref: Type-punning494411
+Node: Instrumentation Options613795
+Node: Preprocessor Options660000
+Ref: dashMF664847
+Ref: fdollars-in-identifiers669509
+Node: Assembler Options682714
+Node: Link Options683405
+Ref: Link Options-Footnote-1700365
+Node: Directory Options700701
+Node: Code Gen Options709104
+Node: Developer Options737977
+Node: Submodel Options779362
+Node: AArch64 Options781172
+Ref: aarch64-feature-modifiers796718
+Node: Adapteva Epiphany Options802279
+Node: AMD GCN Options808231
+Node: ARC Options809794
+Node: ARM Options830563
+Node: AVR Options871826
+Node: Blackfin Options898363
+Node: C6X Options906255
+Node: CRIS Options907798
+Node: CR16 Options911537
+Node: C-SKY Options912449
+Node: Darwin Options918176
+Node: DEC Alpha Options925617
+Node: eBPF Options937233
+Node: FR30 Options939609
+Node: FT32 Options940169
+Node: FRV Options941115
+Node: GNU/Linux Options947879
+Node: H8/300 Options949260
+Node: HPPA Options950712
+Node: IA-64 Options960244
+Node: LM32 Options968372
+Node: M32C Options968895
+Node: M32R/D Options970168
+Node: M680x0 Options973713
+Node: MCore Options987868
+Node: MeP Options989370
+Node: MicroBlaze Options993330
+Node: MIPS Options996395
+Node: MMIX Options1033192
+Node: MN10300 Options1035669
+Node: Moxie Options1038212
+Node: MSP430 Options1038699
+Node: NDS32 Options1046460
+Node: Nios II Options1048630
+Node: Nvidia PTX Options1061846
+Node: OpenRISC Options1064538
+Node: PDP-11 Options1067292
+Node: picoChip Options1068541
+Node: PowerPC Options1070679
+Node: PRU Options1070899
+Node: RISC-V Options1073108
+Node: RL78 Options1080760
+Node: RS/6000 and PowerPC Options1084535
+Node: RX Options1126051
+Node: S/390 and zSeries Options1134653
+Node: Score Options1145432
+Node: SH Options1146281
+Node: Solaris 2 Options1161421
+Node: SPARC Options1162659
+Node: System V Options1178311
+Node: TILE-Gx Options1179139
+Node: TILEPro Options1180157
+Node: V850 Options1180661
+Node: VAX Options1187348
+Node: Visium Options1188040
+Node: VMS Options1190348
+Node: VxWorks Options1191164
+Node: x86 Options1192316
+Node: x86 Windows Options1259225
+Node: Xstormy16 Options1262031
+Node: Xtensa Options1262325
+Node: zSeries Options1268461
+Node: Spec Files1268657
+Node: Environment Variables1294736
+Node: Precompiled Headers1304169
+Node: C++ Modules1310378
+Ref: C++ Modules-Footnote-11316518
+Node: C++ Module Mapper1316771
+Node: C++ Module Preprocessing1321924
+Node: C++ Compiled Module Interface1323753
+Ref: C++ Compiled Module Interface-Footnote-11327137
+Ref: C++ Compiled Module Interface-Footnote-21327226
+Node: C Implementation1327282
+Node: Translation implementation1328973
+Node: Environment implementation1329564
+Node: Identifiers implementation1330118
+Node: Characters implementation1331204
+Node: Integers implementation1334854
+Node: Floating point implementation1336903
+Node: Arrays and pointers implementation1339966
+Ref: Arrays and pointers implementation-Footnote-11341426
+Node: Hints implementation1341552
+Node: Structures unions enumerations and bit-fields implementation1343047
+Node: Qualifiers implementation1345271
+Node: Declarators implementation1347332
+Node: Statements implementation1347673
+Node: Preprocessing directives implementation1347999
+Node: Library functions implementation1350320
+Node: Architecture implementation1350969
+Node: Locale-specific behavior implementation1352614
+Node: C++ Implementation1352919
+Node: Conditionally-supported behavior1354203
+Node: Exception handling1354820
+Node: C Extensions1355287
+Node: Statement Exprs1360510
+Node: Local Labels1365882
+Node: Labels as Values1368855
+Ref: Labels as Values-Footnote-11371382
+Node: Nested Functions1371567
+Node: Nonlocal Gotos1375521
+Node: Constructing Calls1377787
+Node: Typeof1382502
+Node: Conditionals1386431
+Node: __int1281387320
+Node: Long Long1387845
+Node: Complex1389336
+Node: Floating Types1392104
+Node: Half-Precision1395625
+Node: Decimal Float1399093
+Node: Hex Floats1400947
+Node: Fixed-Point1402021
+Node: Named Address Spaces1405279
+Ref: AVR Named Address Spaces1405965
+Node: Zero Length1413259
+Node: Empty Structures1417440
+Node: Variable Length1417846
+Node: Variadic Macros1420564
+Node: Escaped Newlines1422942
+Node: Subscripting1423803
+Node: Pointer Arith1424528
+Node: Variadic Pointer Args1425105
+Node: Pointers to Arrays1425830
+Node: Initializers1426583
+Node: Compound Literals1427084
+Node: Designated Inits1430651
+Node: Case Ranges1434575
+Node: Cast to Union1435256
+Node: Mixed Labels and Declarations1436990
+Node: Function Attributes1437627
+Node: Common Function Attributes1442094
+Ref: Common Function Attributes-Footnote-11517627
+Node: AArch64 Function Attributes1517944
+Node: AMD GCN Function Attributes1524138
+Node: ARC Function Attributes1527191
+Node: ARM Function Attributes1530128
+Node: AVR Function Attributes1535267
+Node: Blackfin Function Attributes1539802
+Node: BPF Function Attributes1542299
+Node: CR16 Function Attributes1542887
+Node: C-SKY Function Attributes1543406
+Node: Epiphany Function Attributes1544705
+Node: H8/300 Function Attributes1547460
+Node: IA-64 Function Attributes1548658
+Node: M32C Function Attributes1549700
+Node: M32R/D Function Attributes1552038
+Node: m68k Function Attributes1553512
+Node: MCORE Function Attributes1554456
+Node: MeP Function Attributes1555267
+Node: MicroBlaze Function Attributes1556568
+Node: Microsoft Windows Function Attributes1558075
+Node: MIPS Function Attributes1562644
+Node: MSP430 Function Attributes1568262
+Node: NDS32 Function Attributes1572341
+Node: Nios II Function Attributes1574765
+Node: Nvidia PTX Function Attributes1576062
+Node: PowerPC Function Attributes1576677
+Node: RISC-V Function Attributes1583451
+Node: RL78 Function Attributes1584867
+Node: RX Function Attributes1586106
+Node: S/390 Function Attributes1588653
+Node: SH Function Attributes1590481
+Node: Symbian OS Function Attributes1593909
+Node: V850 Function Attributes1594245
+Node: Visium Function Attributes1594790
+Node: x86 Function Attributes1595318
+Node: Xstormy16 Function Attributes1619120
+Node: Variable Attributes1619627
+Node: Common Variable Attributes1621160
+Node: ARC Variable Attributes1643067
+Node: AVR Variable Attributes1643449
+Node: Blackfin Variable Attributes1648611
+Node: H8/300 Variable Attributes1649469
+Node: IA-64 Variable Attributes1650542
+Node: M32R/D Variable Attributes1651293
+Node: MeP Variable Attributes1652076
+Node: Microsoft Windows Variable Attributes1654169
+Node: MSP430 Variable Attributes1656622
+Node: Nvidia PTX Variable Attributes1657836
+Node: PowerPC Variable Attributes1658453
+Node: RL78 Variable Attributes1659010
+Node: V850 Variable Attributes1659429
+Node: x86 Variable Attributes1660062
+Node: Xstormy16 Variable Attributes1661118
+Node: Type Attributes1661688
+Node: Common Type Attributes1663376
+Node: ARC Type Attributes1685737
+Node: ARM Type Attributes1686209
+Node: BPF Type Attributes1686991
+Node: MeP Type Attributes1687508
+Node: PowerPC Type Attributes1687910
+Node: x86 Type Attributes1688899
+Node: Label Attributes1689891
+Node: Enumerator Attributes1691918
+Node: Statement Attributes1693450
+Node: Attribute Syntax1694933
+Node: Function Prototypes1706191
+Node: C++ Comments1707971
+Node: Dollar Signs1708490
+Node: Character Escapes1708955
+Node: Alignment1709239
+Node: Inline1710892
+Node: Volatiles1715709
+Node: Using Assembly Language with C1718608
+Node: Basic Asm1719845
+Node: Extended Asm1725468
+Ref: Volatile1729582
+Ref: AssemblerTemplate1733695
+Ref: OutputOperands1737935
+Ref: FlagOutputOperands1744898
+Ref: InputOperands1747845
+Ref: Clobbers and Scratch Registers1752113
+Ref: GotoLabels1760754
+Ref: x86Operandmodifiers1764377
+Ref: x86floatingpointasmoperands1769193
+Ref: msp430Operandmodifiers1772522
+Node: Constraints1774180
+Node: Simple Constraints1775286
+Node: Multi-Alternative1782600
+Node: Modifiers1784275
+Node: Machine Constraints1787074
+Node: Asm Labels1843900
+Node: Explicit Register Variables1845520
+Ref: Explicit Reg Vars1845734
+Node: Global Register Variables1846343
+Ref: Global Reg Vars1846551
+Node: Local Register Variables1851333
+Ref: Local Reg Vars1851553
+Node: Size of an asm1855181
+Node: Alternate Keywords1856659
+Node: Incomplete Enums1858164
+Node: Function Names1858921
+Node: Return Address1860825
+Node: Vector Extensions1865412
+Node: Offsetof1876395
+Node: __sync Builtins1877228
+Node: __atomic Builtins1883671
+Node: Integer Overflow Builtins1897297
+Node: x86 specific memory model extensions for transactional memory1903780
+Node: Object Size Checking1905046
+Node: Other Builtins1912062
+Node: Target Builtins1964393
+Node: AArch64 Built-in Functions1966168
+Node: Alpha Built-in Functions1966864
+Node: Altera Nios II Built-in Functions1969958
+Node: ARC Built-in Functions1974397
+Node: ARC SIMD Built-in Functions1979609
+Node: ARM iWMMXt Built-in Functions1988607
+Node: ARM C Language Extensions (ACLE)1995743
+Node: ARM Floating Point Status and Control Intrinsics1997020
+Node: ARM ARMv8-M Security Extensions1997505
+Node: AVR Built-in Functions1998797
+Node: Blackfin Built-in Functions2002563
+Node: BPF Built-in Functions2003183
+Node: FR-V Built-in Functions2004642
+Node: Argument Types2005505
+Node: Directly-mapped Integer Functions2007336
+Node: Directly-mapped Media Functions2008496
+Node: Raw read/write Functions2016778
+Node: Other Built-in Functions2017686
+Node: MIPS DSP Built-in Functions2018872
+Node: MIPS Paired-Single Support2031627
+Node: MIPS Loongson Built-in Functions2033126
+Node: Paired-Single Arithmetic2039648
+Node: Paired-Single Built-in Functions2040671
+Node: MIPS-3D Built-in Functions2043338
+Node: MIPS SIMD Architecture (MSA) Support2048732
+Node: MIPS SIMD Architecture Built-in Functions2051572
+Node: Other MIPS Built-in Functions2078426
+Node: MSP430 Built-in Functions2079435
+Node: NDS32 Built-in Functions2080836
+Node: picoChip Built-in Functions2082129
+Node: Basic PowerPC Built-in Functions2083478
+Node: Basic PowerPC Built-in Functions Available on all Configurations2084336
+Node: Basic PowerPC Built-in Functions Available on ISA 2.052092846
+Node: Basic PowerPC Built-in Functions Available on ISA 2.062097681
+Node: Basic PowerPC Built-in Functions Available on ISA 2.072099761
+Node: Basic PowerPC Built-in Functions Available on ISA 3.02100615
+Node: Basic PowerPC Built-in Functions Available on ISA 3.12107593
+Node: PowerPC AltiVec/VSX Built-in Functions2110806
+Node: PowerPC AltiVec Built-in Functions on ISA 2.052118875
+Node: PowerPC AltiVec Built-in Functions Available on ISA 2.062144275
+Node: PowerPC AltiVec Built-in Functions Available on ISA 2.072151341
+Node: PowerPC AltiVec Built-in Functions Available on ISA 3.02161151
+Node: PowerPC AltiVec Built-in Functions Available on ISA 3.12176874
+Node: PowerPC Hardware Transactional Memory Built-in Functions2210158
+Node: PowerPC Atomic Memory Operation Functions2218708
+Node: PowerPC Matrix-Multiply Assist Built-in Functions2221271
+Node: PRU Built-in Functions2227396
+Node: RISC-V Built-in Functions2228584
+Node: RX Built-in Functions2228995
+Node: S/390 System z Built-in Functions2232997
+Node: SH Built-in Functions2238227
+Node: SPARC VIS Built-in Functions2239955
+Node: TI C6X Built-in Functions2248486
+Node: TILE-Gx Built-in Functions2249537
+Node: TILEPro Built-in Functions2250662
+Node: x86 Built-in Functions2251770
+Node: x86 transactional memory intrinsics2317069
+Node: x86 control-flow protection intrinsics2320336
+Node: Target Format Checks2322107
+Node: Solaris Format Checks2322539
+Node: Darwin Format Checks2322965
+Node: Pragmas2323928
+Node: AArch64 Pragmas2324869
+Node: ARM Pragmas2325326
+Node: M32C Pragmas2325953
+Node: MeP Pragmas2327025
+Node: PRU Pragmas2329077
+Node: RS/6000 and PowerPC Pragmas2329655
+Node: S/390 Pragmas2330395
+Node: Darwin Pragmas2330961
+Node: Solaris Pragmas2332014
+Node: Symbol-Renaming Pragmas2333178
+Node: Structure-Layout Pragmas2334815
+Node: Weak Pragmas2337095
+Node: Diagnostic Pragmas2337830
+Node: Visibility Pragmas2342581
+Node: Push/Pop Macro Pragmas2343266
+Node: Function Specific Option Pragmas2344239
+Node: Loop-Specific Pragmas2346205
+Node: Unnamed Fields2347805
+Node: Thread-Local2350002
+Node: C99 Thread-Local Edits2352108
+Node: C++98 Thread-Local Edits2354106
+Node: Binary constants2357551
+Node: C++ Extensions2358222
+Node: C++ Volatiles2359852
+Node: Restricted Pointers2362200
+Node: Vague Linkage2363791
+Node: C++ Interface2367414
+Ref: C++ Interface-Footnote-12371211
+Node: Template Instantiation2371349
+Node: Bound member functions2377440
+Node: C++ Attributes2378972
+Node: Function Multiversioning2383044
+Node: Type Traits2384852
+Node: C++ Concepts2391802
+Node: Deprecated Features2393308
+Node: Backwards Compatibility2395133
+Node: Objective-C2396205
+Node: GNU Objective-C runtime API2396812
+Node: Modern GNU Objective-C runtime API2397819
+Node: Traditional GNU Objective-C runtime API2400255
+Node: Executing code before main2400982
+Node: What you can and what you cannot do in +load2403726
+Node: Type encoding2406096
+Node: Legacy type encoding2411462
+Node: @encode2412552
+Node: Method signatures2413097
+Node: Garbage Collection2415089
+Node: Constant string objects2417779
+Node: compatibility_alias2420288
+Node: Exceptions2421013
+Node: Synchronization2423723
+Node: Fast enumeration2424907
+Node: Using fast enumeration2425219
+Node: c99-like fast enumeration syntax2426430
+Node: Fast enumeration details2427133
+Node: Fast enumeration protocol2429473
+Node: Messaging with the GNU Objective-C runtime2432625
+Node: Dynamically registering methods2433997
+Node: Forwarding hook2435688
+Node: Compatibility2438728
+Node: Gcov2445284
+Node: Gcov Intro2445819
+Node: Invoking Gcov2448537
+Node: Gcov and Optimization2471270
+Node: Gcov Data Files2475023
+Node: Cross-profiling2476432
+Node: Gcov-tool2478286
+Node: Gcov-tool Intro2478711
+Node: Invoking Gcov-tool2480681
+Node: Gcov-dump2483259
+Node: Gcov-dump Intro2483582
+Node: Invoking Gcov-dump2483849
+Node: lto-dump2484506
+Node: lto-dump Intro2484805
+Node: Invoking lto-dump2485055
+Node: Trouble2486151
+Node: Actual Bugs2487568
+Node: Interoperation2488015
+Node: Incompatibilities2494906
+Node: Fixed Headers2503058
+Node: Standard Libraries2504716
+Node: Disappointments2506088
+Node: C++ Misunderstandings2510447
+Node: Static Definitions2511258
+Node: Name lookup2512311
+Ref: Name lookup-Footnote-12517092
+Node: Temporaries2517281
+Node: Copy Assignment2519257
+Node: Non-bugs2521092
+Node: Warnings and Errors2531598
+Node: Bugs2533360
+Node: Bug Criteria2533827
+Node: Bug Reporting2536037
+Node: Service2536255
+Node: Contributing2537076
+Node: Funding2537822
+Node: GNU Project2540312
+Node: Copying2540960
+Node: GNU Free Documentation License2578471
+Node: Contributors2603591
+Node: Option Index2644564
+Node: Keyword Index2940881
 
 End Tag Table
 
