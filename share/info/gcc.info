@@ -50464,54 +50464,69 @@ options are explicitly disabled on the command line, specifying option
  The following built-in functions are available on Linux 64-bit systems
 that use a future architecture instruction set ('-mcpu=power10'):
 
-unsigned long long int
-__builtin_cfuged (unsigned long long int, unsigned long long int)
+unsigned long long
+__builtin_cfuged (unsigned long long, unsigned long long)
  Perform a 64-bit centrifuge operation, as if implemented by the
 'cfuged' instruction.
 
-unsigned long long int
-__builtin_cntlzdm (unsigned long long int, unsigned long long int)
+unsigned long long
+__builtin_cntlzdm (unsigned long long, unsigned long long)
  Perform a 64-bit count leading zeros operation under mask, as if
 implemented by the 'cntlzdm' instruction.
 
-unsigned long long int
-__builtin_cnttzdm (unsigned long long int, unsigned long long int)
+unsigned long long
+__builtin_cnttzdm (unsigned long long, unsigned long long)
  Perform a 64-bit count trailing zeros operation under mask, as if
 implemented by the 'cnttzdm' instruction.
 
-unsigned long long int
-__builtin_pdepd (unsigned long long int, unsigned long long int)
+unsigned long long
+__builtin_pdepd (unsigned long long, unsigned long long)
  Perform a 64-bit parallel bits deposit operation, as if implemented by
 the 'pdepd' instruction.
 
-unsigned long long int
-__builtin_pextd (unsigned long long int, unsigned long long int)
+unsigned long long
+__builtin_pextd (unsigned long long, unsigned long long)
  Perform a 64-bit parallel bits extract operation, as if implemented by
 the 'pextd' instruction.
 
-vector signed __int128 vsx_xl_sext (signed long long, signed char *);
-vector signed __int128 vsx_xl_sext (signed long long, signed short *);
-vector signed __int128 vsx_xl_sext (signed long long, signed int *);
-vector signed __int128 vsx_xl_sext (signed long long, signed long long *);
-vector unsigned __int128 vsx_xl_zext (signed long long, unsigned char *);
-vector unsigned __int128 vsx_xl_zext (signed long long, unsigned short *);
-vector unsigned __int128 vsx_xl_zext (signed long long, unsigned int *);
-vector unsigned __int128 vsx_xl_zext (signed long long, unsigned long long *);
+vector signed __int128 vsx_xl_sext (signed long long, signed char *)
+
+vector signed __int128 vsx_xl_sext (signed long long, signed short *)
+
+vector signed __int128 vsx_xl_sext (signed long long, signed int *)
+
+vector signed __int128 vsx_xl_sext (signed long long, signed long long *)
+
+vector unsigned __int128 vsx_xl_zext (signed long long, unsigned char *)
+
+vector unsigned __int128 vsx_xl_zext (signed long long, unsigned short *)
+
+vector unsigned __int128 vsx_xl_zext (signed long long, unsigned int *)
+
+vector unsigned __int128 vsx_xl_zext (signed long long, unsigned long long *)
 
  Load (and sign extend) to an __int128 vector, as if implemented by the
-ISA 3.1 'lxvrbx' 'lxvrhx' 'lxvrwx' 'lxvrdx' instructions.
+ISA 3.1 'lxvrbx', 'lxvrhx', 'lxvrwx', and 'lxvrdx' instructions.
 
-void vec_xst_trunc (vector signed __int128, signed long long, signed char *);
-void vec_xst_trunc (vector signed __int128, signed long long, signed short *);
-void vec_xst_trunc (vector signed __int128, signed long long, signed int *);
-void vec_xst_trunc (vector signed __int128, signed long long, signed long long *);
-void vec_xst_trunc (vector unsigned __int128, signed long long, unsigned char *);
-void vec_xst_trunc (vector unsigned __int128, signed long long, unsigned short *);
-void vec_xst_trunc (vector unsigned __int128, signed long long, unsigned int *);
-void vec_xst_trunc (vector unsigned __int128, signed long long, unsigned long long *);
+void vec_xst_trunc (vector signed __int128, signed long long, signed char *)
+
+void vec_xst_trunc (vector signed __int128, signed long long, signed short *)
+
+void vec_xst_trunc (vector signed __int128, signed long long, signed int *)
+
+void vec_xst_trunc (vector signed __int128, signed long long, signed long long *)
+
+void vec_xst_trunc (vector unsigned __int128, signed long long, unsigned char *)
+
+void vec_xst_trunc (vector unsigned __int128, signed long long, unsigned short *)
+
+void vec_xst_trunc (vector unsigned __int128, signed long long, unsigned int *)
+
+void vec_xst_trunc (vector unsigned __int128, signed long long, unsigned long long *)
 
  Truncate and store the rightmost element of a vector, as if implemented
-by the ISA 3.1 'stxvrbx' 'stxvrhx' 'stxvrwx' 'stxvrdx' instructions.
+by the ISA 3.1 'stxvrbx', 'stxvrhx', 'stxvrwx', and 'stxvrdx'
+instructions.
 
 
 File: gcc.info,  Node: PowerPC AltiVec/VSX Built-in Functions,  Next: PowerPC Hardware Transactional Memory Built-in Functions,  Prev: Basic PowerPC Built-in Functions,  Up: Target Builtins
@@ -69834,7 +69849,7 @@ Keyword Index
 * vec_ternarylogic:                      PowerPC AltiVec Built-in Functions Available on ISA 3.1.
                                                              (line  401)
 * vec_xst_trunc:                         Basic PowerPC Built-in Functions Available on ISA 3.1.
-                                                             (line   62)
+                                                             (line   77)
 * version_id function attribute, IA-64:  IA-64 Function Attributes.
                                                              (line   16)
 * vfprintf:                              Other Builtins.     (line    6)
@@ -69866,9 +69881,9 @@ Keyword Index
 * vsprintf:                              Other Builtins.     (line    6)
 * vsscanf:                               Other Builtins.     (line    6)
 * vsx_xl_sext:                           Basic PowerPC Built-in Functions Available on ISA 3.1.
-                                                             (line   50)
+                                                             (line   57)
 * vsx_xl_zext:                           Basic PowerPC Built-in Functions Available on ISA 3.1.
-                                                             (line   50)
+                                                             (line   57)
 * vtable:                                Vague Linkage.      (line   27)
 * VxWorks Options:                       VxWorks Options.    (line    6)
 * w floating point suffix:               Floating Types.     (line    6)
@@ -70245,133 +70260,133 @@ Node: Basic PowerPC Built-in Functions Available on ISA 2.062107655
 Node: Basic PowerPC Built-in Functions Available on ISA 2.072109735
 Node: Basic PowerPC Built-in Functions Available on ISA 3.02110589
 Node: Basic PowerPC Built-in Functions Available on ISA 3.12117567
-Node: PowerPC AltiVec/VSX Built-in Functions2120780
-Node: PowerPC AltiVec Built-in Functions on ISA 2.052128849
-Node: PowerPC AltiVec Built-in Functions Available on ISA 2.062154249
-Node: PowerPC AltiVec Built-in Functions Available on ISA 2.072161315
-Node: PowerPC AltiVec Built-in Functions Available on ISA 3.02171125
-Node: PowerPC AltiVec Built-in Functions Available on ISA 3.12186848
-Node: PowerPC Hardware Transactional Memory Built-in Functions2220132
-Node: PowerPC Atomic Memory Operation Functions2228682
-Node: PowerPC Matrix-Multiply Assist Built-in Functions2231245
-Node: PRU Built-in Functions2237370
-Node: RISC-V Built-in Functions2238558
-Node: RX Built-in Functions2238969
-Node: S/390 System z Built-in Functions2242971
-Node: SH Built-in Functions2248201
-Node: SPARC VIS Built-in Functions2249929
-Node: TI C6X Built-in Functions2258460
-Node: TILE-Gx Built-in Functions2259511
-Node: TILEPro Built-in Functions2260636
-Node: x86 Built-in Functions2261744
-Node: x86 transactional memory intrinsics2327043
-Node: x86 control-flow protection intrinsics2330310
-Node: Target Format Checks2332081
-Node: Solaris Format Checks2332513
-Node: Darwin Format Checks2332939
-Node: Pragmas2333902
-Node: AArch64 Pragmas2334843
-Node: ARM Pragmas2335300
-Node: M32C Pragmas2335927
-Node: MeP Pragmas2336999
-Node: PRU Pragmas2339051
-Node: RS/6000 and PowerPC Pragmas2339629
-Node: S/390 Pragmas2340369
-Node: Darwin Pragmas2340935
-Node: Solaris Pragmas2341988
-Node: Symbol-Renaming Pragmas2343152
-Node: Structure-Layout Pragmas2344789
-Node: Weak Pragmas2347069
-Node: Diagnostic Pragmas2347804
-Node: Visibility Pragmas2352555
-Node: Push/Pop Macro Pragmas2353240
-Node: Function Specific Option Pragmas2354213
-Node: Loop-Specific Pragmas2356179
-Node: Unnamed Fields2357779
-Node: Thread-Local2359976
-Node: C99 Thread-Local Edits2362082
-Node: C++98 Thread-Local Edits2364080
-Node: Binary constants2367525
-Node: C++ Extensions2368196
-Node: C++ Volatiles2369826
-Node: Restricted Pointers2372174
-Node: Vague Linkage2373765
-Node: C++ Interface2377388
-Ref: C++ Interface-Footnote-12381185
-Node: Template Instantiation2381323
-Node: Bound member functions2387414
-Node: C++ Attributes2388946
-Node: Function Multiversioning2393018
-Node: Type Traits2394826
-Node: C++ Concepts2401776
-Node: Deprecated Features2403282
-Node: Backwards Compatibility2405107
-Node: Objective-C2406179
-Node: GNU Objective-C runtime API2406786
-Node: Modern GNU Objective-C runtime API2407793
-Node: Traditional GNU Objective-C runtime API2410229
-Node: Executing code before main2410956
-Node: What you can and what you cannot do in +load2413700
-Node: Type encoding2416070
-Node: Legacy type encoding2421436
-Node: @encode2422526
-Node: Method signatures2423071
-Node: Garbage Collection2425063
-Node: Constant string objects2427753
-Node: compatibility_alias2430262
-Node: Exceptions2430987
-Node: Synchronization2433697
-Node: Fast enumeration2434881
-Node: Using fast enumeration2435193
-Node: c99-like fast enumeration syntax2436404
-Node: Fast enumeration details2437107
-Node: Fast enumeration protocol2439447
-Node: Messaging with the GNU Objective-C runtime2442599
-Node: Dynamically registering methods2443971
-Node: Forwarding hook2445662
-Node: Compatibility2448702
-Node: Gcov2455258
-Node: Gcov Intro2455793
-Node: Invoking Gcov2458511
-Node: Gcov and Optimization2481244
-Node: Gcov Data Files2484997
-Node: Cross-profiling2486406
-Node: Gcov-tool2488260
-Node: Gcov-tool Intro2488685
-Node: Invoking Gcov-tool2490655
-Node: Gcov-dump2493233
-Node: Gcov-dump Intro2493556
-Node: Invoking Gcov-dump2493823
-Node: lto-dump2494480
-Node: lto-dump Intro2494779
-Node: Invoking lto-dump2495029
-Node: Trouble2496125
-Node: Actual Bugs2497542
-Node: Interoperation2497989
-Node: Incompatibilities2504880
-Node: Fixed Headers2513032
-Node: Standard Libraries2514690
-Node: Disappointments2516062
-Node: C++ Misunderstandings2520421
-Node: Static Definitions2521232
-Node: Name lookup2522285
-Ref: Name lookup-Footnote-12527066
-Node: Temporaries2527255
-Node: Copy Assignment2529231
-Node: Non-bugs2531066
-Node: Warnings and Errors2541572
-Node: Bugs2543334
-Node: Bug Criteria2543801
-Node: Bug Reporting2546011
-Node: Service2546229
-Node: Contributing2547050
-Node: Funding2547796
-Node: GNU Project2550286
-Node: Copying2550934
-Node: GNU Free Documentation License2588445
-Node: Contributors2613565
-Node: Option Index2654539
-Node: Keyword Index2951564
+Node: PowerPC AltiVec/VSX Built-in Functions2120732
+Node: PowerPC AltiVec Built-in Functions on ISA 2.052128801
+Node: PowerPC AltiVec Built-in Functions Available on ISA 2.062154201
+Node: PowerPC AltiVec Built-in Functions Available on ISA 2.072161267
+Node: PowerPC AltiVec Built-in Functions Available on ISA 3.02171077
+Node: PowerPC AltiVec Built-in Functions Available on ISA 3.12186800
+Node: PowerPC Hardware Transactional Memory Built-in Functions2220084
+Node: PowerPC Atomic Memory Operation Functions2228634
+Node: PowerPC Matrix-Multiply Assist Built-in Functions2231197
+Node: PRU Built-in Functions2237322
+Node: RISC-V Built-in Functions2238510
+Node: RX Built-in Functions2238921
+Node: S/390 System z Built-in Functions2242923
+Node: SH Built-in Functions2248153
+Node: SPARC VIS Built-in Functions2249881
+Node: TI C6X Built-in Functions2258412
+Node: TILE-Gx Built-in Functions2259463
+Node: TILEPro Built-in Functions2260588
+Node: x86 Built-in Functions2261696
+Node: x86 transactional memory intrinsics2326995
+Node: x86 control-flow protection intrinsics2330262
+Node: Target Format Checks2332033
+Node: Solaris Format Checks2332465
+Node: Darwin Format Checks2332891
+Node: Pragmas2333854
+Node: AArch64 Pragmas2334795
+Node: ARM Pragmas2335252
+Node: M32C Pragmas2335879
+Node: MeP Pragmas2336951
+Node: PRU Pragmas2339003
+Node: RS/6000 and PowerPC Pragmas2339581
+Node: S/390 Pragmas2340321
+Node: Darwin Pragmas2340887
+Node: Solaris Pragmas2341940
+Node: Symbol-Renaming Pragmas2343104
+Node: Structure-Layout Pragmas2344741
+Node: Weak Pragmas2347021
+Node: Diagnostic Pragmas2347756
+Node: Visibility Pragmas2352507
+Node: Push/Pop Macro Pragmas2353192
+Node: Function Specific Option Pragmas2354165
+Node: Loop-Specific Pragmas2356131
+Node: Unnamed Fields2357731
+Node: Thread-Local2359928
+Node: C99 Thread-Local Edits2362034
+Node: C++98 Thread-Local Edits2364032
+Node: Binary constants2367477
+Node: C++ Extensions2368148
+Node: C++ Volatiles2369778
+Node: Restricted Pointers2372126
+Node: Vague Linkage2373717
+Node: C++ Interface2377340
+Ref: C++ Interface-Footnote-12381137
+Node: Template Instantiation2381275
+Node: Bound member functions2387366
+Node: C++ Attributes2388898
+Node: Function Multiversioning2392970
+Node: Type Traits2394778
+Node: C++ Concepts2401728
+Node: Deprecated Features2403234
+Node: Backwards Compatibility2405059
+Node: Objective-C2406131
+Node: GNU Objective-C runtime API2406738
+Node: Modern GNU Objective-C runtime API2407745
+Node: Traditional GNU Objective-C runtime API2410181
+Node: Executing code before main2410908
+Node: What you can and what you cannot do in +load2413652
+Node: Type encoding2416022
+Node: Legacy type encoding2421388
+Node: @encode2422478
+Node: Method signatures2423023
+Node: Garbage Collection2425015
+Node: Constant string objects2427705
+Node: compatibility_alias2430214
+Node: Exceptions2430939
+Node: Synchronization2433649
+Node: Fast enumeration2434833
+Node: Using fast enumeration2435145
+Node: c99-like fast enumeration syntax2436356
+Node: Fast enumeration details2437059
+Node: Fast enumeration protocol2439399
+Node: Messaging with the GNU Objective-C runtime2442551
+Node: Dynamically registering methods2443923
+Node: Forwarding hook2445614
+Node: Compatibility2448654
+Node: Gcov2455210
+Node: Gcov Intro2455745
+Node: Invoking Gcov2458463
+Node: Gcov and Optimization2481196
+Node: Gcov Data Files2484949
+Node: Cross-profiling2486358
+Node: Gcov-tool2488212
+Node: Gcov-tool Intro2488637
+Node: Invoking Gcov-tool2490607
+Node: Gcov-dump2493185
+Node: Gcov-dump Intro2493508
+Node: Invoking Gcov-dump2493775
+Node: lto-dump2494432
+Node: lto-dump Intro2494731
+Node: Invoking lto-dump2494981
+Node: Trouble2496077
+Node: Actual Bugs2497494
+Node: Interoperation2497941
+Node: Incompatibilities2504832
+Node: Fixed Headers2512984
+Node: Standard Libraries2514642
+Node: Disappointments2516014
+Node: C++ Misunderstandings2520373
+Node: Static Definitions2521184
+Node: Name lookup2522237
+Ref: Name lookup-Footnote-12527018
+Node: Temporaries2527207
+Node: Copy Assignment2529183
+Node: Non-bugs2531018
+Node: Warnings and Errors2541524
+Node: Bugs2543286
+Node: Bug Criteria2543753
+Node: Bug Reporting2545963
+Node: Service2546181
+Node: Contributing2547002
+Node: Funding2547748
+Node: GNU Project2550238
+Node: Copying2550886
+Node: GNU Free Documentation License2588397
+Node: Contributors2613517
+Node: Option Index2654491
+Node: Keyword Index2951516
 
 End Tag Table
 
